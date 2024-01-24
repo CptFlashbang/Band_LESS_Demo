@@ -1,6 +1,11 @@
 body {
   background-color: #111111;
 }
+h1,
+h2,
+p {
+  color: #EEF7FF;
+}
 .tri-column {
   display: flex;
   flex-direction: column;
