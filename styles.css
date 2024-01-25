@@ -32,9 +32,12 @@ p {
 .merchandise {
   display: flex;
   flex-direction: column;
+  flex-basis: calc(33.33% - 64px);
   border: 8px solid #75AAB9;
   padding: 8px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #1F1F1F;
 }
 .release {
   display: grid;
@@ -44,6 +47,7 @@ p {
 .release__image {
   grid-column: 1 / span 1;
   grid-row: 1 / span 3;
+  margin: auto;
 }
 .release__title {
   grid-column: 2 / span 1;
@@ -53,16 +57,53 @@ p {
   border: 8px solid #CE83DE;
   text-align: center;
 }
+.performance {
+  display: grid;
+  grid-template-columns: 2;
+  grid-template-rows: 3;
+  width: 60%;
+  margin: auto;
+}
+.performance__venue {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 1;
+  text-align: left;
+}
+.performance__location {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+  text-align: left;
+}
+.performance__date {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+}
+.performance__buy-button {
+  background-color: #CE83DE;
+  /* CLKWRK_Pink color */
+  color: #111111;
+  /* Black color */
+  padding: 10px 20px;
+  /* Adjust padding as needed */
+  border: none;
+  border-radius: 100px;
+  /* Rounded corners */
+  transition: background-color 0.3s ease;
+}
+.performance__buy-button:hover {
+  background-color: #75AAB9;
+  /* CLKWRK_Blue color on hover */
+}
 .merchandise {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 32px 40px;
 }
 .merchandise-item {
-  border: 1px solid #000;
-  /* Optional: Add a border to each item */
-  padding: 10px;
-  /* Optional: Add padding to each item */
   text-align: center;
   /* Optional: Center the content within each item */
+  margin: auto;
+}
+hr {
+  margin: 0%;
 }
