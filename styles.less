@@ -8,9 +8,11 @@
 
 #colors();
 
-body{
+body {
     background-color: @CLKWRK_Black;
     font-family: 'Roboto', sans-serif;
+    width: 90%;
+    margin: 0 auto;
 }
 
 h1, h2, p{
@@ -19,13 +21,15 @@ h1, h2, p{
 
 .tri-column {
 display: flex;
-flex-direction: column;
+flex-direction: row;
 }
 
 .hero{
     display: grid;
     grid-template-columns: 2;
     grid-template-rows: 3;
+    width: 50%;
+    margin: 0 auto;
 }
 .hero__image {
     grid-column: 1 / span 1;
@@ -37,3 +41,30 @@ flex-direction: column;
 }
 
 
+
+.streaming-release, .upcoming-performances, .merchandise{
+    display: flex;
+    flex-direction: column;
+    border: 8px solid @CLKWRK_Blue;
+    padding: 8px;
+}
+.release{
+    display: grid;
+    grid-template-columns: 3;
+    grid-template-rows: 2;
+
+}
+
+.release__image{
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 3;    
+}
+
+.release__title{
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;    
+}
+
+.upcoming-performances{
+    border: 8px solid @CLKWRK_Pink;
+}
