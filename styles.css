@@ -1,5 +1,8 @@
 body {
   background-color: #111111;
+  font-family: 'Roboto', sans-serif;
+  width: 90%;
+  margin: 0 auto;
 }
 h1,
 h2,
@@ -8,5 +11,58 @@ p {
 }
 .tri-column {
   display: flex;
+  flex-direction: row;
+}
+.hero {
+  display: grid;
+  grid-template-columns: 2;
+  grid-template-rows: 3;
+  width: 50%;
+  margin: 0 auto;
+}
+.hero__image {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 3;
+}
+.hero__paragraph {
+  grid-column: 2 / span 1;
+}
+.streaming-release,
+.upcoming-performances,
+.merchandise {
+  display: flex;
   flex-direction: column;
+  border: 8px solid #75AAB9;
+  padding: 8px;
+  margin: auto;
+}
+.release {
+  display: grid;
+  grid-template-columns: 3;
+  grid-template-rows: 2;
+}
+.release__image {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 3;
+}
+.release__title {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+}
+.upcoming-performances {
+  border: 8px solid #CE83DE;
+  text-align: center;
+}
+.merchandise {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.merchandise-item {
+  border: 1px solid #000;
+  /* Optional: Add a border to each item */
+  padding: 10px;
+  /* Optional: Add padding to each item */
+  text-align: center;
+  /* Optional: Center the content within each item */
 }
