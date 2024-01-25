@@ -45,8 +45,12 @@ flex-direction: row;
 .streaming-release, .upcoming-performances, .merchandise{
     display: flex;
     flex-direction: column;
+    flex-basis: calc(33.33% - 64px);
     border: 8px solid @CLKWRK_Blue;
     padding: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: @CLKWRK_Charcoal;
 }
 .release{
     display: grid;
@@ -58,6 +62,7 @@ flex-direction: row;
 .release__image{
     grid-column: 1 / span 1;
     grid-row: 1 / span 3;    
+    margin: auto;
 }
 
 .release__title{
@@ -67,4 +72,56 @@ flex-direction: row;
 
 .upcoming-performances{
     border: 8px solid @CLKWRK_Pink;
+    text-align: center;
+}
+
+.performance{
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 3;    
+    width: 60%;
+    margin:auto;
+}
+
+.performance__venue{
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 1;
+    text-align: left;   
+}
+
+.performance__location{
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;  
+    text-align: left; 
+}
+
+.performance__date{
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;   
+}
+.performance__buy-button {
+    background-color: @CLKWRK_Pink; /* CLKWRK_Pink color */
+    color: @CLKWRK_Black; /* Black color */
+    padding: 10px 20px; /* Adjust padding as needed */
+    border: none;
+    border-radius: 100px; /* Rounded corners */
+    transition: background-color 0.3s ease;
+}
+
+.performance__buy-button:hover {
+    background-color: @CLKWRK_Blue; /* CLKWRK_Blue color on hover */
+}
+
+.merchandise{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 40px;
+}
+.merchandise-item {
+    text-align: center; /* Optional: Center the content within each item */
+    margin:auto;
+}
+
+hr{
+    margin:0%
 }
