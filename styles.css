@@ -14,14 +14,13 @@ body hr:first-child {
 }
 body .hero {
   display: grid;
-  grid-template-columns: 2;
-  grid-template-rows: 3;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
   width: 80%;
   margin: 32px auto;
 }
 body .hero .hero__image {
-  grid-column: 1 / span 1;
-  grid-row: 1 / span 3;
+  grid-area: 1 / 1 / span 3 / span 1;
 }
 body .hero .hero__paragraph {
   grid-column: 2 / span 1;
@@ -30,10 +29,8 @@ body .tri-column {
   display: flex;
   flex-direction: row;
   width: 90%;
-  margin-top: 32px;
-  margin-bottom: 32px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 32px auto;
+  justify-content: center;
 }
 body .tri-column .streaming-release {
   flex-direction: column;
