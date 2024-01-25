@@ -124,7 +124,6 @@ h1, h2, p{
     grid-row: 3 / span 1;   
     align-self: center;
     // box-sizing: border-box;
-    background-color: @CLKWRK_Pink;
     color: @CLKWRK_Black;
     padding: 8px 2px;
     border: none;
@@ -132,8 +131,16 @@ h1, h2, p{
     transition: background-color 0.3s ease;
 }
 
-.performance__buy-button:hover {
+.performance__buy-button--active{    
+    background-color: @CLKWRK_Pink;
+}
+
+.performance__buy-button--active:hover {
     background-color: @CLKWRK_Blue; /* CLKWRK_Blue color on hover */
+}
+
+.performance__buy-button--inactive{    
+    background-color: @CLKWRK_Blue;
 }
 
 .merchandise-items{
