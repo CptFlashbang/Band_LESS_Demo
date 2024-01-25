@@ -19,17 +19,26 @@ h1, h2, p{
     color: @CLKWRK_White;
 }
 
+.main__hr:first-child {
+    margin-top: 80px;
+}
+.main__hr:last-child {
+    margin-bottom: 80px;
+}
+
 .tri-column {
-display: flex;
-flex-direction: row;
+    display: flex;
+    flex-direction: row;
+    margin-top: 32px;
+    margin-bottom: 32px;
 }
 
 .hero{
     display: grid;
     grid-template-columns: 2;
     grid-template-rows: 3;
-    width: 50%;
-    margin: 0 auto;
+    width: 80%;
+    margin: 32px auto;
 }
 .hero__image {
     grid-column: 1 / span 1;
@@ -51,12 +60,18 @@ flex-direction: row;
     margin-left: auto;
     margin-right: auto;
     background-color: @CLKWRK_Charcoal;
+    text-align: center;
 }
 .release{
     display: grid;
     grid-template-columns: 3;
     grid-template-rows: 2;
 
+}
+
+.streaming-release__hr, .upcoming-performances__hr{
+    margin: 0 auto;
+    width: 75%;
 }
 
 .release__image{
@@ -112,14 +127,30 @@ flex-direction: row;
     background-color: @CLKWRK_Blue; /* CLKWRK_Blue color on hover */
 }
 
-.merchandise{
+.merchandise-items{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 32px 40px;
+    text-align: center;
 }
+
+.merchandise__header{
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 1;   
+}
+
+.merchandise__hr{
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 1;
+    margin: 0 auto;
+    width: 75%;
+    
+}
+
 .merchandise-item {
     text-align: center; /* Optional: Center the content within each item */
     margin:auto;
+    text-align: left;  
 }
 
 hr{
