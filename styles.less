@@ -196,8 +196,10 @@ h1, h2, p{
     padding: 8px 12px; /* Adjust padding values as needed */
     background-color: @CLKWRK_Grey;
     border-radius: 4px;
-    min-width: 148px;
-    max-width: 164px;
+    // min-width: 148px;
+    // max-width: 164px;
+    width: 150px;
+    height: 300px;
     margin: auto;
     align-self: center; /* Center vertically */
     justify-self: center; /* Center horizontally */
@@ -226,6 +228,27 @@ h1, h2, p{
     margin-block-start: 0.5em;
     margin-block-end: 0.5em;    
     color: @CLKWRK_Black;
+}
+
+.merchandise-items__shop-button {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;   
+    align-self: center;
+    // box-sizing: border-box;
+    color: @CLKWRK_Black;
+    padding: 8px 2px;
+    border: none;
+    border-radius: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.merchandise-items__shop-button--active{    
+    background-color: @CLKWRK_Pink;
+}
+
+.merchandise-items__shop-button--active:hover {
+    background-color: @CLKWRK_Blue;
+    cursor: pointer;
 }
 
 

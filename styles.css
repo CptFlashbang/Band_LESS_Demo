@@ -20,6 +20,9 @@ p {
   flex-direction: row;
   margin-top: 32px;
   margin-bottom: 32px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .hero {
   display: grid;
@@ -42,6 +45,7 @@ p {
   flex-direction: column;
   flex-basis: calc(33.33% - 64px);
   border: 8px solid #75AAB9;
+  border-radius: 10px;
   padding: 8px;
   margin-left: auto;
   margin-right: auto;
@@ -50,13 +54,16 @@ p {
 }
 .release {
   display: grid;
-  grid-template-columns: 3;
+  grid-template-columns: 1fr 2fr 0.5fr;
   grid-template-rows: 2;
+  width: 80%;
+  text-align: left;
+  margin: auto;
 }
 .streaming-release__hr,
 .upcoming-performances__hr {
   margin: 0 auto;
-  width: 75%;
+  width: 60%;
 }
 .release__image {
   grid-column: 1 / span 1;
@@ -67,6 +74,10 @@ p {
   grid-column: 2 / span 1;
   grid-row: 1 / span 1;
 }
+.release__date {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+}
 .upcoming-performances {
   border: 8px solid #CE83DE;
   text-align: center;
@@ -75,7 +86,7 @@ p {
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 3;
-  width: 50%;
+  width: 70%;
   margin: auto;
 }
 .performance__venue {
@@ -87,36 +98,45 @@ p {
   grid-column: 1 / span 1;
   grid-row: 2 / span 1;
   text-align: left;
+  font-size: 16px;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
 }
 .performance__ticket-availability {
   grid-column: 1 / span 1;
   grid-row: 3 / span 1;
   text-align: left;
+  font-size: 12px;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
 }
 .performance__date {
   grid-column: 2 / span 1;
   grid-row: 2 / span 1;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  font-size: 16px;
 }
 .performance__buy-button {
   grid-column: 2 / span 1;
   grid-row: 3 / span 1;
   align-self: center;
-  background-color: #CE83DE;
   color: #111111;
   padding: 8px 2px;
   border: none;
-  border-radius: 8px;
+  border-radius: 16px;
   transition: background-color 0.3s ease;
 }
-.performance__buy-button:hover {
-  background-color: #75AAB9;
-  /* CLKWRK_Blue color on hover */
+.performance__buy-button--active {
+  background-color: #CE83DE;
 }
-.merchandise-items {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px 40px;
-  text-align: center;
+.performance__buy-button--active:hover {
+  background-color: #75AAB9;
+  cursor: pointer;
+}
+.performance__buy-button--inactive {
+  background-color: #838383;
+  color: #EEF7FF;
 }
 .merchandise__header {
   grid-column: 1 / span 2;
@@ -128,11 +148,69 @@ p {
   margin: 0 auto;
   width: 75%;
 }
+.merchandise-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+  /* Adjust the gap value */
+  margin-top: 32px;
+  box-sizing: border-box;
+  /* Include padding and borders in the total width */
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
 .merchandise-item {
-  text-align: center;
-  /* Optional: Center the content within each item */
-  margin: auto;
   text-align: left;
+  padding: 8px 12px;
+  /* Adjust padding values as needed */
+  background-color: #838383;
+  border-radius: 4px;
+  width: 150px;
+  height: 300px;
+  margin: auto;
+  align-self: center;
+  /* Center vertically */
+  justify-self: center;
+  /* Center horizontally */
+  box-sizing: border-box;
+}
+.merchandise-item__image {
+  margin: auto;
+  display: block;
+  border-radius: 4px;
+}
+.merchandise-item__name {
+  margin-block-start: 0.5em;
+  margin-block-end: 0.25em;
+  color: #111111;
+}
+.merchandise-item__colour {
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  color: #111111;
+}
+.merchandise-item__price {
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  color: #111111;
+}
+.merchandise-items__shop-button {
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+  align-self: center;
+  color: #111111;
+  padding: 8px 2px;
+  border: none;
+  border-radius: 16px;
+  transition: background-color 0.3s ease;
+}
+.merchandise-items__shop-button--active {
+  background-color: #CE83DE;
+}
+.merchandise-items__shop-button--active:hover {
+  background-color: #75AAB9;
+  cursor: pointer;
 }
 hr {
   margin: 0%;
