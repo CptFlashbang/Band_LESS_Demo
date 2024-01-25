@@ -92,9 +92,9 @@ h1, h2, p{
 
 .performance{
     display: grid;
-    grid-template-columns: 2;
+    grid-template-columns: 3fr 1fr;
     grid-template-rows: 3;    
-    width: 60%;
+    width: 50%;
     margin:auto;
 }
 
@@ -110,16 +110,25 @@ h1, h2, p{
     text-align: left; 
 }
 
+.performance__ticket-availability{
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;  
+    text-align: left;
+}
 .performance__date{
     grid-column: 2 / span 1;
     grid-row: 2 / span 1;   
 }
 .performance__buy-button {
-    background-color: @CLKWRK_Pink; /* CLKWRK_Pink color */
-    color: @CLKWRK_Black; /* Black color */
-    padding: 10px 20px; /* Adjust padding as needed */
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;   
+    align-self: center;
+    // box-sizing: border-box;
+    background-color: @CLKWRK_Pink;
+    color: @CLKWRK_Black;
+    padding: 8px 2px;
     border: none;
-    border-radius: 100px; /* Rounded corners */
+    border-radius: 8px;
     transition: background-color 0.3s ease;
 }
 
