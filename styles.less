@@ -228,10 +228,14 @@ body {
             .performance {
                 display: grid;
                 grid-template-columns: 3fr 1fr;
-                grid-template-rows: 1fr;
+                //grid-template-rows: 1fr;
                 width: 70%;
                 margin: 1em auto;
-                                @media (max-width: 767px) {
+                @media (min-width: 426px) and (max-width: 1023px) {
+                    margin-left: 48px;
+                    margin-right: 48px;
+                }
+                @media (max-width: 767px) {
                     //width: 95%;
                 }
                 .venue_mixin{
