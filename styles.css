@@ -1,8 +1,28 @@
+.button_mixin {
+  align-self: center;
+  color: #111111;
+  padding: 8px 2px;
+  border: none;
+  border-radius: 16px;
+  transition: background-color 0.3s ease;
+}
+.button_mixin--active {
+  background-color: #CE83DE;
+}
+.button_mixin--active:hover {
+  background-color: #75AAB9;
+  cursor: pointer;
+}
+.button_mixin--inactive {
+  background-color: #838383;
+  color: #EEF7FF;
+}
 body {
   width: 90%;
   margin: 0 auto;
   background-color: #111111;
   font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
 }
 body h1,
 body h2,
@@ -36,8 +56,7 @@ body .tri-column .streaming-release {
   flex-direction: column;
   flex-basis: calc(33.33% - 64px);
   padding: 8px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   background-color: #1F1F1F;
   text-align: center;
   border: 8px solid #75AAB9;
@@ -111,7 +130,6 @@ body .tri-column .upcoming-performances .performance__ticket-availability {
   font-size: 12px;
   margin-block-start: 0.5em;
   margin-block-end: 0.5em;
-  font-weight: bold;
 }
 body .tri-column .upcoming-performances .performance__date {
   grid-column: 2 / span 1;
@@ -217,9 +235,13 @@ body .tri-column .merchandise .merchandise-items .merchandise-items__shop-button
 body .tri-column .merchandise .merchandise-items .merchandise-items__shop-button--active {
   background-color: #CE83DE;
 }
-body .tri-column .merchandise .merchandise-items .merchandise-items__shop-button:hover {
+body .tri-column .merchandise .merchandise-items .merchandise-items__shop-button--active:hover {
   background-color: #75AAB9;
   cursor: pointer;
+}
+body .tri-column .merchandise .merchandise-items .merchandise-items__shop-button--inactive {
+  background-color: #838383;
+  color: #EEF7FF;
 }
 body hr:last-child {
   margin-bottom: 80px;

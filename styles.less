@@ -8,6 +8,30 @@
 }
 #colors();
 
+.button_mixin {
+    align-self: center;
+    color: @CLKWRK_Black;
+    padding: 8px 2px;
+    border: none;
+    border-radius: 16px;
+    transition: background-color 0.3s ease;
+
+    &--active {
+        background-color: @CLKWRK_Pink;
+
+        &:hover {
+            background-color: @CLKWRK_Blue;
+            cursor: pointer;
+        }
+    }
+
+    &--inactive {
+        background-color: @CLKWRK_Grey;
+        color: @CLKWRK_White;
+    }
+  }
+
+
 body {
     width: 90%;
     margin: 0 auto;
@@ -105,33 +129,32 @@ body {
                 grid-template-rows: 1fr;
                 width: 70%;
                 margin: 1em auto;
-
-                &__venue {
-                    grid-column: 1 / span 2;
-                    grid-row: 1 / span 1;
+                .venue_mixin{
                     text-align: left;
-                    font-size: 24px;
                     margin-block-start: 0.5em;
                     margin-block-end: 0.5em;
                 }
 
+                &__venue {
+                    grid-column: 1 / span 2;
+                    grid-row: 1 / span 1;                    
+                    font-size: 24px;
+                    .venue_mixin
+                }
+
+
                 &__location {
                     grid-column: 1 / span 1;
                     grid-row: 2 / span 1;
-                    text-align: left;
                     font-size: 16px;
-                    margin-block-start: 0.5em;
-                    margin-block-end: 0.5em;
+                    .venue_mixin
                 }
 
                 &__ticket-availability {
                     grid-column: 1 / span 1;
                     grid-row: 3 / span 1;
-                    text-align: left;
                     font-size: 12px;
-                    margin-block-start: 0.5em;
-                    margin-block-end: 0.5em;
-                    font-weight: bold;
+                    .venue_mixin
                 }
 
                 &__date {
@@ -145,26 +168,7 @@ body {
                 &__buy-button {
                     grid-column: 2 / span 1;
                     grid-row: 3 / span 1;
-                    align-self: center;
-                    color: @CLKWRK_Black;
-                    padding: 8px 2px;
-                    border: none;
-                    border-radius: 16px;
-                    transition: background-color 0.3s ease;
-
-                    &--active {
-                        background-color: @CLKWRK_Pink;
-
-                        &:hover {
-                            background-color: @CLKWRK_Blue;
-                            cursor: pointer;
-                        }
-                    }
-
-                    &--inactive {
-                        background-color: @CLKWRK_Grey;
-                        color: @CLKWRK_White;
-                    }
+                    .button_mixin;
                 }
             }
         }
@@ -242,21 +246,7 @@ body {
                 .merchandise-items__shop-button {
                     grid-column: 2 / span 1;
                     grid-row: 3 / span 1;
-                    align-self: center;
-                    color: @CLKWRK_Black;
-                    padding: 8px 2px;
-                    border: none;
-                    border-radius: 16px;
-                    transition: background-color 0.3s ease;
-
-                    &--active  {
-                        background-color: @CLKWRK_Pink;
-                    }
-
-                    &:hover {
-                        background-color: @CLKWRK_Blue;
-                        cursor: pointer;
-                    }
+                    .button_mixin;
                 }
             }
         }
