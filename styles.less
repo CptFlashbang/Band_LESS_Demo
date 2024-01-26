@@ -43,6 +43,9 @@ body {
     }
     hr:first-child {
         margin-top: 80px;
+        @media (max-width: 767px) {
+            margin-top: 32px;
+        }
     }
 
     .hero {
@@ -80,6 +83,7 @@ body {
         justify-content: center;
         @media (max-width: 767px) {
             flex-direction: column;
+            margin: 0 auto;
         }
 
         .streaming-release {
@@ -91,6 +95,9 @@ body {
             text-align: center;
             border: 8px solid @CLKWRK_Blue;
             border-radius: 10px;
+            @media (max-width: 767px) {
+                margin: 16px auto;
+            }
 
             &__hr {
                 width: 60%;
@@ -103,6 +110,9 @@ body {
                 width: 80%;
                 margin: auto;
                 text-align: left;
+                @media (max-width: 767px) {
+                    width: 90%;
+                }
 
                 .release__image {
                     grid-column: 1 / span 1;
@@ -113,11 +123,13 @@ body {
                 .release__title {
                     grid-column: 2 / span 1;
                     grid-row: 1 / span 1;
+                    padding-left: 8px;
                 }
 
                 .release__date {
                     grid-column: 2 / span 1;
                     grid-row: 2 / span 1;
+                    padding-left: 8px;
                 }
             }
         }
@@ -133,6 +145,10 @@ body {
             border: 8px solid @CLKWRK_Pink;
             border-radius: 10px;
 
+            @media (max-width: 767px) {
+                margin: 16px auto;
+            }
+
             &__hr {                
                 width: 60%;
             }
@@ -143,6 +159,9 @@ body {
                 grid-template-rows: 1fr;
                 width: 70%;
                 margin: 1em auto;
+                @media (max-width: 767px) {
+                    width: 90%;
+                }
                 .venue_mixin{
                     text-align: left;
                     margin-block-start: 0.5em;
@@ -193,10 +212,16 @@ body {
             padding: 8px;
             margin-left: auto;
             margin-right: auto;
-            background-color: @CLKWRK_Charcoal;
+            // background-color: @CLKWRK_Charcoal;
             text-align: center;
             border: 8px solid @CLKWRK_Blue;
             border-radius: 10px;
+            @media (max-width: 767px) {
+                margin: 16px auto;
+            }
+            background-color: blue;
+            align-self: center;
+            justify-self: center;
 
             .merchandise__header {
                 grid-column: 1 / span 2;
@@ -212,13 +237,14 @@ body {
 
             .merchandise-items {
                 display: grid;
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: 1;
+                grid-template-rows: 3;
                 gap: 1em;
-                margin-top: 32px;
                 box-sizing: border-box;
-                width: 80%;
-                margin-left: auto;
-                margin-right: auto;
+                width: 80%;                
+                margin: 32px auto;
+                background-color: red;
+                
 
                 .merchandise-item {
                     text-align: left;
