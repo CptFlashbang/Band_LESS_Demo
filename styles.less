@@ -8,7 +8,7 @@
 }
 #colors();
 
-.button_mixin {
+.button__mixin {
     align-self: center;
     color: @CLKWRK_Black;
     padding: 8px 2px;
@@ -32,6 +32,17 @@
     }
   }
 
+.column__mixin{
+    flex-direction: column;
+    flex-basis: calc(33.33% - 64px);
+    padding: 8px;
+    margin: 0 auto;
+    background-color: @CLKWRK_Charcoal;
+    text-align: center;    
+    border-radius: 10px;
+    width: 95%;
+    
+}
 
 body {
     width: 90%;
@@ -85,17 +96,12 @@ body {
         @media (max-width: 767px) {
             flex-direction: column;
             margin: 0 auto;
+            width: 100%;
         }
 
         .streaming-release {
-            flex-direction: column;
-            flex-basis: calc(33.33% - 64px);
-            padding: 8px;
-            margin: 0 auto;
-            background-color: @CLKWRK_Charcoal;
-            text-align: center;
+            .column__mixin;
             border: 8px solid @CLKWRK_Blue;
-            border-radius: 10px;
             @media (max-width: 767px) {
                 margin: 16px auto;
             }
@@ -112,7 +118,7 @@ body {
                 margin: auto;
                 text-align: left;
                 @media (max-width: 767px) {
-                    width: 90%;
+                    width: 95%;
                 }
 
                 .release__image {
@@ -136,15 +142,8 @@ body {
         }
 
         .upcoming-performances {
-            flex-direction: column;
-            flex-basis: calc(33.33% - 64px);
-            padding: 8px;
-            margin-left: auto;
-            margin-right: auto;
-            background-color: @CLKWRK_Charcoal;
-            text-align: center;
+            .column__mixin;
             border: 8px solid @CLKWRK_Pink;
-            border-radius: 10px;
 
             @media (max-width: 767px) {
                 margin: 16px auto;
@@ -161,7 +160,7 @@ body {
                 width: 70%;
                 margin: 1em auto;
                 @media (max-width: 767px) {
-                    width: 90%;
+                    //width: 95%;
                 }
                 .venue_mixin{
                     text-align: left;
@@ -202,26 +201,18 @@ body {
                 &__buy-button {
                     grid-column: 2 / span 1;
                     grid-row: 3 / span 1;
-                    .button_mixin;
+                    .button__mixin;
                 }
             }
         }
 
         .merchandise {
-            flex-direction: column;
-            flex-basis: calc(33.33% - 64px);
-            padding: 8px;
-            margin-left: auto;
-            margin-right: auto;
-            // background-color: @CLKWRK_Charcoal;
-            text-align: center;
+            .column__mixin;
             border: 8px solid @CLKWRK_Blue;
-            border-radius: 10px;
             @media (max-width: 767px) {
-                margin: 16px auto;
+                //width: 95%;
             }
-            align-self: center;
-            justify-self: center;
+
 
             .merchandise__header {
                 grid-column: 1 / span 2;
@@ -296,7 +287,7 @@ body {
                 .merchandise-items__shop-button {
                     grid-column: 4 / span 1;
                     //grid-row: 3 / span 1;
-                    .button_mixin;
+                    .button__mixin;
                 }
             }
         }
