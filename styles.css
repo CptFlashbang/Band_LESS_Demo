@@ -390,9 +390,12 @@ body .tri-column .merchandise .merchandise__hr {
 body .tri-column .merchandise .merchandise-items {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
-  grid-template-rows: 3fr 3fr 1fr;
+  grid-template-rows: 3fr 3fr;
   box-sizing: border-box;
-  margin: 32px auto;
+  margin-top: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   body .tri-column .merchandise .merchandise-items {
@@ -451,8 +454,7 @@ body .tri-column .merchandise .merchandise-items .merchandise-item .merchandise-
   margin-block-end: 0.1em;
   color: #111111;
 }
-body .tri-column .merchandise .merchandise-items .merchandise-items__shop-button {
-  grid-column: 4 / span 1;
+body .tri-column .merchandise .merchandise-items__shop-button {
   align-self: center;
   color: #111111;
   padding: 8px 2px;
@@ -460,14 +462,14 @@ body .tri-column .merchandise .merchandise-items .merchandise-items__shop-button
   border-radius: 16px;
   transition: background-color 0.3s ease;
 }
-body .tri-column .merchandise .merchandise-items .merchandise-items__shop-button--active {
+body .tri-column .merchandise .merchandise-items__shop-button--active {
   background-color: #CE83DE;
 }
-body .tri-column .merchandise .merchandise-items .merchandise-items__shop-button--active:hover {
+body .tri-column .merchandise .merchandise-items__shop-button--active:hover {
   background-color: #75AAB9;
   cursor: pointer;
 }
-body .tri-column .merchandise .merchandise-items .merchandise-items__shop-button--inactive {
+body .tri-column .merchandise .merchandise-items__shop-button--inactive {
   background-color: #838383;
   color: #EEF7FF;
 }
