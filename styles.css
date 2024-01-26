@@ -1,4 +1,31 @@
-.button_mixin {
+.column__mixin {
+  flex-direction: column;
+  flex-basis: calc(33.33% - 64px);
+  padding: 8px;
+  background-color: #1F1F1F;
+  text-align: center;
+  border-radius: 10px;
+  width: 90%;
+  margin: 0 auto;
+}
+@media (min-width: 426px) and (max-width: 1023px) {
+  .column__mixin {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 767px) {
+  .column__mixin {
+    margin: 16px auto;
+  }
+}
+@media (min-width: 426px) and (max-width: 1023px) {
+  .column__mixin__h1 {
+    padding-left: 8px;
+  }
+}
+.button__mixin {
   align-self: center;
   color: #111111;
   padding: 8px 2px;
@@ -6,14 +33,14 @@
   border-radius: 16px;
   transition: background-color 0.3s ease;
 }
-.button_mixin--active {
+.button__mixin--active {
   background-color: #CE83DE;
 }
-.button_mixin--active:hover {
+.button__mixin--active:hover {
   background-color: #75AAB9;
   cursor: pointer;
 }
-.button_mixin--inactive {
+.button__mixin--inactive {
   background-color: #838383;
   color: #EEF7FF;
 }
@@ -24,6 +51,16 @@ body {
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
 }
+@media (min-width: 426px) and (max-width: 1023px) {
+  body {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  body {
+    width: 95%;
+  }
+}
 body h1,
 body h2,
 body p {
@@ -32,9 +69,19 @@ body p {
 body hr:first-child {
   margin-top: 80px;
 }
+@media (min-width: 426px) and (max-width: 1023px) {
+  body hr:first-child {
+    margin-top: 32px;
+  }
+}
 @media (max-width: 767px) {
   body hr:first-child {
     margin-top: 32px;
+  }
+}
+@media (min-width: 426px) and (max-width: 1023px) {
+  body hr {
+    width: 90%;
   }
 }
 body .hero {
@@ -43,6 +90,11 @@ body .hero {
   grid-template-rows: auto;
   width: 80%;
   margin: 32px auto;
+}
+@media (min-width: 426px) and (max-width: 1023px) {
+  body .hero {
+    width: 90%;
+  }
 }
 body .hero .hero__image {
   grid-area: 1 / 1 / span 3 / span 1;
@@ -71,29 +123,59 @@ body .tri-column {
   margin: 32px auto;
   justify-content: center;
 }
+@media (min-width: 426px) and (max-width: 1023px) {
+  body .tri-column {
+    flex-direction: column;
+    width: 100%;
+  }
+}
 @media (max-width: 767px) {
   body .tri-column {
     flex-direction: column;
-    margin: 0 auto;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    width: calc(100% + 6%);
+    margin-left: -3%;
+    margin-right: -3%;
   }
 }
 body .tri-column .streaming-release {
   flex-direction: column;
   flex-basis: calc(33.33% - 64px);
   padding: 8px;
-  margin: 0 auto;
   background-color: #1F1F1F;
   text-align: center;
-  border: 8px solid #75AAB9;
   border-radius: 10px;
+  width: 90%;
+  margin: 0 auto;
+  border: 8px solid #75AAB9;
+}
+@media (min-width: 426px) and (max-width: 1023px) {
+  body .tri-column .streaming-release {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
 }
 @media (max-width: 767px) {
   body .tri-column .streaming-release {
     margin: 16px auto;
   }
 }
-body .tri-column .streaming-release__hr {
-  width: 60%;
+@media (min-width: 426px) and (max-width: 1023px) {
+  body .tri-column .streaming-release__h1 {
+    padding-left: 8px;
+  }
+}
+@media (min-width: 426px) and (max-width: 1023px) {
+  body .tri-column .streaming-release .releases {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    /* Enable horizontal scrolling */
+    white-space: nowrap;
+    /* Prevent line breaks for horizontal list */
+  }
 }
 body .tri-column .streaming-release .release {
   display: grid;
@@ -103,15 +185,27 @@ body .tri-column .streaming-release .release {
   margin: auto;
   text-align: left;
 }
+@media (min-width: 426px) and (max-width: 1023px) {
+  body .tri-column .streaming-release .release {
+    margin-left: 48px;
+    margin-right: 48px;
+  }
+}
 @media (max-width: 767px) {
   body .tri-column .streaming-release .release {
-    width: 90%;
+    width: 95%;
   }
 }
 body .tri-column .streaming-release .release .release__image {
   grid-column: 1 / span 1;
   grid-row: 1 / span 3;
   margin: auto;
+}
+@media (min-width: 426px) and (max-width: 1023px) {
+  body .tri-column .streaming-release .release .release__image {
+    display: inline-block;
+    background-color: blue;
+  }
 }
 body .tri-column .streaming-release .release .release__title {
   grid-column: 2 / span 1;
@@ -127,16 +221,46 @@ body .tri-column .upcoming-performances {
   flex-direction: column;
   flex-basis: calc(33.33% - 64px);
   padding: 8px;
-  margin-left: auto;
-  margin-right: auto;
   background-color: #1F1F1F;
   text-align: center;
-  border: 8px solid #CE83DE;
   border-radius: 10px;
+  width: 90%;
+  margin: 0 auto;
+  border: 8px solid #CE83DE;
+}
+@media (min-width: 426px) and (max-width: 1023px) {
+  body .tri-column .upcoming-performances {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
 }
 @media (max-width: 767px) {
   body .tri-column .upcoming-performances {
     margin: 16px auto;
+  }
+}
+@media (min-width: 426px) and (max-width: 1023px) {
+  body .tri-column .upcoming-performances__h1 {
+    padding-left: 8px;
+  }
+}
+@media (min-width: 426px) and (max-width: 1023px) {
+  body .tri-column .upcoming-performances .performances {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    /* Enable horizontal scrolling */
+    white-space: nowrap;
+    /* Prevent line breaks for horizontal list */
+  }
+}
+body .tri-column .upcoming-performances__hr {
+  width: 60%;
+}
+@media (min-width: 426px) and (max-width: 1023px) {
+  body .tri-column .upcoming-performances__hr {
+    width: 100%;
   }
 }
 body .tri-column .upcoming-performances__hr {
@@ -145,13 +269,13 @@ body .tri-column .upcoming-performances__hr {
 body .tri-column .upcoming-performances .performance {
   display: grid;
   grid-template-columns: 3fr 1fr;
-  grid-template-rows: 1fr;
   width: 70%;
   margin: 1em auto;
 }
-@media (max-width: 767px) {
+@media (min-width: 426px) and (max-width: 1023px) {
   body .tri-column .upcoming-performances .performance {
-    width: 90%;
+    margin-left: 48px;
+    margin-right: 48px;
   }
 }
 body .tri-column .upcoming-performances .performance .venue_mixin {
@@ -166,6 +290,12 @@ body .tri-column .upcoming-performances .performance__venue {
   text-align: left;
   margin-block-start: 0.5em;
   margin-block-end: 0.5em;
+}
+@media (min-width: 426px) and (max-width: 1023px) {
+  body .tri-column .upcoming-performances .performance__venue {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 body .tri-column .upcoming-performances .performance__location {
   grid-column: 1 / span 1;
@@ -190,6 +320,14 @@ body .tri-column .upcoming-performances .performance__date {
   margin-block-end: 0.5em;
   font-size: 16px;
 }
+@media (min-width: 426px) and (max-width: 1023px) {
+  body .tri-column .upcoming-performances .performance__date {
+    margin-left: 1em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-right: 0.5em;
+  }
+}
 body .tri-column .upcoming-performances .performance__buy-button {
   grid-column: 2 / span 1;
   grid-row: 3 / span 1;
@@ -211,24 +349,41 @@ body .tri-column .upcoming-performances .performance__buy-button--inactive {
   background-color: #838383;
   color: #EEF7FF;
 }
+@media (min-width: 426px) and (max-width: 1023px) {
+  body .tri-column .upcoming-performances .performance__buy-button {
+    grid-column: 1 / span 2;
+    grid-row: 4 / span 1;
+  }
+}
 body .tri-column .merchandise {
   flex-direction: column;
   flex-basis: calc(33.33% - 64px);
   padding: 8px;
-  margin-left: auto;
-  margin-right: auto;
+  background-color: #1F1F1F;
   text-align: center;
-  border: 8px solid #75AAB9;
   border-radius: 10px;
-  align-self: center;
-  justify-self: center;
+  width: 90%;
+  margin: 0 auto;
+  border: 8px solid #75AAB9;
+}
+@media (min-width: 426px) and (max-width: 1023px) {
+  body .tri-column .merchandise {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
 }
 @media (max-width: 767px) {
   body .tri-column .merchandise {
     margin: 16px auto;
   }
 }
-body .tri-column .merchandise .merchandise__header {
+@media (min-width: 426px) and (max-width: 1023px) {
+  body .tri-column .merchandise__h1 {
+    padding-left: 8px;
+  }
+}
+body .tri-column .merchandise .merchandise__h1 {
   grid-column: 1 / span 2;
   grid-row: 1 / span 1;
 }
