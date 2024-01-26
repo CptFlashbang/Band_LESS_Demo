@@ -8,7 +8,31 @@
 }
 #colors();
 
-.button_mixin {
+.column__mixin{
+    flex-direction: column;
+    flex-basis: calc(33.33% - 64px);
+    padding: 8px;
+    background-color: @CLKWRK_Charcoal;
+    text-align: center;    
+    border-radius: 10px;
+    width: 90%;    
+    margin: 0 auto;
+    @media (min-width: 426px) and (max-width: 1023px) {
+        text-align: left;  
+        display:flex;
+        flex-direction: column;
+    }
+    @media (max-width: 767px) {
+        margin: 16px auto;
+    }
+    &__h1{
+        @media (min-width: 426px) and (max-width: 1023px) {
+            padding-left: 8px;
+        }
+    }
+}
+
+.button__mixin {
     align-self: center;
     color: @CLKWRK_Black;
     padding: 8px 2px;
@@ -16,6 +40,12 @@
     border-radius: 16px;
     transition: background-color 0.3s ease;
     //width: 72px;
+    @media (min-width: 426px) and (max-width: 1023px) {
+        //margin-top: 32px;
+    }
+    @media (max-width: 767px) {
+        //margin: 16px auto;
+    }
 
     &--active {
         background-color: @CLKWRK_Pink;
@@ -33,21 +63,40 @@
   }
 
 
+
 body {
     width: 90%;
     margin: 0 auto;
     background-color: @CLKWRK_Black;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+    @media (min-width: 426px) and (max-width: 1023px) {
+        width: 100%;
+    }
+    @media (max-width: 767px) {
+        width: 95%;
+    }
+
     h1, h2, p {
         color: @CLKWRK_White;
     }
     hr:first-child {
         margin-top: 80px;
+        @media (min-width: 426px) and (max-width: 1023px) {
+            margin-top: 32px;
+        }
         @media (max-width: 767px) {
             margin-top: 32px;
         }
     }
+    hr{
+        @media (min-width: 426px) and (max-width: 1023px) {
+            width: 90%;
+        }
+    }
+        
+        
+        
 
     .hero {
         display: grid;
@@ -55,6 +104,9 @@ body {
         grid-template-rows: auto;
         width: 80%;
         margin: 32px auto;
+        @media (min-width: 426px) and (max-width: 1023px) {
+            width: 90%;
+        }
 
         .hero__image {
             grid-area: 1 / 1 / span 3 / span 1;
@@ -82,28 +134,36 @@ body {
         width: 90%;
         margin: 32px auto;
         justify-content: center;
+        @media (min-width: 426px) and (max-width: 1023px) {
+            flex-direction: column;
+            width: 100%;
+        }
         @media (max-width: 767px) {
             flex-direction: column;
-            margin: 0 auto;
+            margin-top: 16px;
+            margin-bottom: 16px;
+            width: calc(100% + 6%);
+            margin-left: -3%;
+            margin-right: -3%;
         }
 
         .streaming-release {
-            flex-direction: column;
-            flex-basis: calc(33.33% - 64px);
-            padding: 8px;
-            margin: 0 auto;
-            background-color: @CLKWRK_Charcoal;
-            text-align: center;
+            .column__mixin;
             border: 8px solid @CLKWRK_Blue;
-            border-radius: 10px;
-            @media (max-width: 767px) {
-                margin: 16px auto;
-            }
+
 
             &__hr {
-                width: 60%;
+                //width: 60%;
             }
 
+            .releases{
+                @media (min-width: 426px) and (max-width: 1023px) {
+                    display: flex;
+                    flex-direction: row;
+                    overflow-x: auto; /* Enable horizontal scrolling */
+                    white-space: nowrap; /* Prevent line breaks for horizontal list */
+                }
+            }
             .release {
                 display: grid;
                 grid-template-columns: 1fr 2fr 0.5fr;
@@ -111,15 +171,19 @@ body {
                 width: 80%;
                 margin: auto;
                 text-align: left;
+                @media (min-width: 426px) and (max-width: 1023px) {
+                    margin-left: 48px;
+                    margin-right: 48px;
+                }
                 @media (max-width: 767px) {
-                    width: 90%;
+                    width: 95%;
                 }
 
                 .release__image {
                     grid-column: 1 / span 1;
                     grid-row: 1 / span 3;
                     margin: auto;
-                }
+                                    }
 
                 .release__title {
                     grid-column: 2 / span 1;
@@ -131,37 +195,48 @@ body {
                     grid-column: 2 / span 1;
                     grid-row: 2 / span 1;
                     padding-left: 8px;
-                }
+                } 
             }
         }
 
         .upcoming-performances {
-            flex-direction: column;
-            flex-basis: calc(33.33% - 64px);
-            padding: 8px;
-            margin-left: auto;
-            margin-right: auto;
-            background-color: @CLKWRK_Charcoal;
-            text-align: center;
+            .column__mixin;
             border: 8px solid @CLKWRK_Pink;
-            border-radius: 10px;
 
-            @media (max-width: 767px) {
-                margin: 16px auto;
+            .performances{
+                @media (min-width: 426px) and (max-width: 1023px) {
+                    display: flex;
+                    flex-direction: row;
+                    overflow-x: auto; /* Enable horizontal scrolling */
+                    white-space: nowrap; /* Prevent line breaks for horizontal list */
+                }
             }
 
             &__hr {                
                 width: 60%;
+                @media (min-width: 426px) and (max-width: 1023px) {
+                    width: 100%;
+                }
             }
+
+            
+
+            &__hr {                
+                width: 60%;
+                            }
 
             .performance {
                 display: grid;
                 grid-template-columns: 3fr 1fr;
-                grid-template-rows: 1fr;
+                //grid-template-rows: 1fr;
                 width: 70%;
                 margin: 1em auto;
+                @media (min-width: 426px) and (max-width: 1023px) {
+                    margin-left: 48px;
+                    margin-right: 48px;
+                }
                 @media (max-width: 767px) {
-                    width: 90%;
+                    //width: 95%;
                 }
                 .venue_mixin{
                     text-align: left;
@@ -173,7 +248,11 @@ body {
                     grid-column: 1 / span 2;
                     grid-row: 1 / span 1;                    
                     font-size: 24px;
-                    .venue_mixin
+                    .venue_mixin;
+                    @media (min-width: 426px) and (max-width: 1023px) {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
                 }
 
 
@@ -197,33 +276,33 @@ body {
                     margin-block-start: 0.5em;
                     margin-block-end: 0.5em;
                     font-size: 16px;
+                    @media (min-width: 426px) and (max-width: 1023px) {
+                        margin-left: 1em;
+                        margin-top: 0.5em;
+                        margin-bottom: 0.5em;
+                        margin-right: 0.5em;
+                    }
                 }
 
                 &__buy-button {
                     grid-column: 2 / span 1;
                     grid-row: 3 / span 1;
-                    .button_mixin;
+                    .button__mixin;
+                    @media (min-width: 426px) and (max-width: 1023px) {
+                        grid-column: 1 / span 2;
+                        grid-row: 4 / span 1;
+                    }
                 }
             }
         }
 
         .merchandise {
-            flex-direction: column;
-            flex-basis: calc(33.33% - 64px);
-            padding: 8px;
-            margin-left: auto;
-            margin-right: auto;
-            // background-color: @CLKWRK_Charcoal;
-            text-align: center;
+            .column__mixin;
             border: 8px solid @CLKWRK_Blue;
-            border-radius: 10px;
-            @media (max-width: 767px) {
-                margin: 16px auto;
-            }
-            align-self: center;
-            justify-self: center;
 
-            .merchandise__header {
+
+
+            .merchandise__h1 {
                 grid-column: 1 / span 2;
                 grid-row: 1 / span 1;
             }
@@ -296,7 +375,7 @@ body {
                 .merchandise-items__shop-button {
                     grid-column: 4 / span 1;
                     //grid-row: 3 / span 1;
-                    .button_mixin;
+                    .button__mixin;
                 }
             }
         }
