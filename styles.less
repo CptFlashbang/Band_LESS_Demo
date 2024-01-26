@@ -223,23 +223,22 @@ body {
                         display: block;
                         border-radius: 4px;
                     }
-
-                    .merchandise-item__name {
+                    
+                    .merch_mixin{
                         margin-block-start: 0.5em;
                         margin-block-end: 0.25em;
                         color: @CLKWRK_Black;
                     }
+                    .merchandise-item__name {
+                        .merch_mixin
+                    }
 
                     .merchandise-item__colour {
-                        margin-block-start: 0.5em;
-                        margin-block-end: 0.5em;
-                        color: @CLKWRK_Black;
+                        .merch_mixin
                     }
 
                     .merchandise-item__price {
-                        margin-block-start: 0.5em;
-                        margin-block-end: 0.5em;
-                        color: @CLKWRK_Black;
+                        .merch_mixin
                     }
                 }
 
