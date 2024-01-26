@@ -201,12 +201,6 @@ body .tri-column .streaming-release .release .release__image {
   grid-row: 1 / span 3;
   margin: auto;
 }
-@media (min-width: 426px) and (max-width: 1023px) {
-  body .tri-column .streaming-release .release .release__image {
-    display: inline-block;
-    background-color: blue;
-  }
-}
 body .tri-column .streaming-release .release .release__title {
   grid-column: 2 / span 1;
   grid-row: 1 / span 1;
@@ -399,6 +393,16 @@ body .tri-column .merchandise .merchandise-items {
   grid-template-rows: 3fr 3fr 1fr;
   box-sizing: border-box;
   margin: 32px auto;
+}
+@media (min-width: 426px) and (max-width: 1023px) {
+  body .tri-column .merchandise .merchandise-items {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    /* Enable horizontal scrolling */
+    white-space: nowrap;
+    /* Prevent line breaks for horizontal list */
+  }
 }
 body .tri-column .merchandise .merchandise-items .merchandise-item {
   text-align: left;
