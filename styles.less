@@ -204,6 +204,20 @@ body {
             .column__mixin;
             border: 8px solid @CLKWRK_Pink;
 
+            .performances{
+                @media (min-width: 426px) and (max-width: 1023px) {
+                    display: flex;
+                    flex-direction: row;
+                }
+            }
+
+            &__hr {                
+                width: 60%;
+                @media (min-width: 426px) and (max-width: 1023px) {
+                    width: 100%;
+                }
+            }
+
             
 
             &__hr {                
