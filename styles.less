@@ -18,7 +18,8 @@
     width: 90%;    
     margin: 0 auto;
     @media (min-width: 426px) and (max-width: 1023px) {
-        width: 100%;
+        display:flex;
+        flex-direction: row;
     }
     @media (max-width: 767px) {
         margin: 16px auto;
@@ -63,9 +64,13 @@ body {
     background-color: @CLKWRK_Black;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+    @media (min-width: 426px) and (max-width: 1023px) {
+        width: 100%;
+    }
     @media (max-width: 767px) {
         width: 95%;
     }
+
     h1, h2, p {
         color: @CLKWRK_White;
     }
@@ -78,6 +83,14 @@ body {
             margin-top: 32px;
         }
     }
+    hr{
+        @media (min-width: 426px) and (max-width: 1023px) {
+            width: 90%;
+        }
+    }
+        
+        
+        
 
     .hero {
         display: grid;
@@ -86,7 +99,7 @@ body {
         width: 80%;
         margin: 32px auto;
         @media (min-width: 426px) and (max-width: 1023px) {
-            width: 100%;
+            width: 90%;
         }
 
         .hero__image {
@@ -115,6 +128,10 @@ body {
         width: 90%;
         margin: 32px auto;
         justify-content: center;
+        @media (min-width: 426px) and (max-width: 1023px) {
+            flex-direction: column;
+            width: 100%;
+        }
         @media (max-width: 767px) {
             flex-direction: column;
             margin-top: 16px;
