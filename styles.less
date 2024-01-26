@@ -15,6 +15,7 @@
     border: none;
     border-radius: 16px;
     transition: background-color 0.3s ease;
+    //width: 72px;
 
     &--active {
         background-color: @CLKWRK_Pink;
@@ -219,7 +220,6 @@ body {
             @media (max-width: 767px) {
                 margin: 16px auto;
             }
-            background-color: blue;
             align-self: center;
             justify-self: center;
 
@@ -237,26 +237,36 @@ body {
 
             .merchandise-items {
                 display: grid;
-                grid-template-columns: 1;
-                grid-template-rows: 3;
-                gap: 1em;
-                box-sizing: border-box;
-                width: 80%;                
+                grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
+                grid-template-rows: 3fr 3fr 1fr;
+                // display: flex;
+                // flex-direction: row;
+                // flex-wrap: wrap;
+                box-sizing: border-box;  
                 margin: 32px auto;
-                background-color: red;
+                //width:90%;
                 
-
-                .merchandise-item {
+                .merchandise-item {                    
                     text-align: left;
                     padding: 8px 12px;
                     background-color: @CLKWRK_Grey;
                     border-radius: 4px;
                     width: 150px;
-                    height: 300px;
-                    margin: auto;
-                    align-self: center;
-                    justify-self: center;
+                    height: 300px;                    
                     box-sizing: border-box;
+                    margin:32px auto;
+                    &:nth-child(1){
+                        grid-column: 2 / span 1; 
+                    }
+                    &:nth-child(2){
+                        grid-column: 4 / span 1; 
+                    }
+                    &:nth-child(3){
+                        grid-column: 2 / span 1; 
+                    }
+                    &:nth-child(4){
+                        grid-column: 4 / span 1; 
+                    }
 
                     .merchandise-item__image {
                         margin: auto;
@@ -283,8 +293,8 @@ body {
                 }
 
                 .merchandise-items__shop-button {
-                    grid-column: 2 / span 1;
-                    grid-row: 3 / span 1;
+                    grid-column: 4 / span 1;
+                    //grid-row: 3 / span 1;
                     .button_mixin;
                 }
             }
