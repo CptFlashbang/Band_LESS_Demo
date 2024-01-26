@@ -207,7 +207,9 @@ body {
                 @media (min-width: 426px) and (max-width: 1023px) {
                     display: flex;
                     flex-direction: row;
-                                    }
+                    overflow-x: auto; /* Enable horizontal scrolling */
+                    white-space: nowrap; /* Prevent line breaks for horizontal list */
+                }
             }
 
             &__hr {                
