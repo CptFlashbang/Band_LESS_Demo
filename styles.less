@@ -21,6 +21,7 @@
         text-align: left;  
         display:flex;
         flex-direction: column;
+        margin: 16px auto;
     }
     @media (max-width: 767px) {
         margin: 16px auto;
@@ -137,6 +138,7 @@ body {
         @media (min-width: 426px) and (max-width: 1023px) {
             flex-direction: column;
             width: 100%;
+            
         }
         @media (max-width: 767px) {
             flex-direction: column;
@@ -328,6 +330,10 @@ body {
                     flex-direction: row;
                     overflow-x: auto; /* Enable horizontal scrolling */
                     white-space: nowrap; /* Prevent line breaks for horizontal list */
+                    margin-top: 8px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 8px;
                 }
                 .merchandise-item {                    
                     text-align: left;
@@ -338,6 +344,9 @@ body {
                     height: 300px;                    
                     box-sizing: border-box;
                     margin:32px auto;
+                    @media (min-width: 426px) and (max-width: 1023px) {
+                        margin:8px;
+                    }
                     &:nth-child(1){
                         grid-column: 2 / span 1; 
                     }

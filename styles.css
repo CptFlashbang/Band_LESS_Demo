@@ -13,6 +13,7 @@
     text-align: left;
     display: flex;
     flex-direction: column;
+    margin: 16px auto;
   }
 }
 @media (max-width: 767px) {
@@ -155,6 +156,7 @@ body .tri-column .streaming-release {
     text-align: left;
     display: flex;
     flex-direction: column;
+    margin: 16px auto;
   }
 }
 @media (max-width: 767px) {
@@ -227,6 +229,7 @@ body .tri-column .upcoming-performances {
     text-align: left;
     display: flex;
     flex-direction: column;
+    margin: 16px auto;
   }
 }
 @media (max-width: 767px) {
@@ -365,6 +368,7 @@ body .tri-column .merchandise {
     text-align: left;
     display: flex;
     flex-direction: column;
+    margin: 16px auto;
   }
 }
 @media (max-width: 767px) {
@@ -405,6 +409,10 @@ body .tri-column .merchandise .merchandise-items {
     /* Enable horizontal scrolling */
     white-space: nowrap;
     /* Prevent line breaks for horizontal list */
+    margin-top: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 8px;
   }
 }
 body .tri-column .merchandise .merchandise-items .merchandise-item {
@@ -416,6 +424,11 @@ body .tri-column .merchandise .merchandise-items .merchandise-item {
   height: 300px;
   box-sizing: border-box;
   margin: 32px auto;
+}
+@media (min-width: 426px) and (max-width: 1023px) {
+  body .tri-column .merchandise .merchandise-items .merchandise-item {
+    margin: 8px;
+  }
 }
 body .tri-column .merchandise .merchandise-items .merchandise-item:nth-child(1) {
   grid-column: 2 / span 1;
