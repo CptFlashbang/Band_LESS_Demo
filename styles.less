@@ -278,8 +278,35 @@ body {
                 &__ticket-availability {
                     grid-column: 1 / span 1;
                     grid-row: 3 / span 1;
-                    font-size: 12px;
+                    display: flex;
+                    flex-direction: row;
+                    
+                    .temp{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        &--active {
+                            color: green;
+                            i{
+                                margin: 8px;
+                            }
+                        }
+                    
+                        &--inactive {                            
+                            color: red;
+                            i{
+                                margin: 8px;
+                            }
+                        }
+
+                        
+                    }                
+                    p {
+                        font-size: 12px;
+                        
+                    }              
                     .venue_mixin
+                    
                 }
 
                 &__date {
