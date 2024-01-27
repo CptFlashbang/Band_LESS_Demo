@@ -26,6 +26,14 @@
     padding-left: 8px;
   }
 }
+.column__mixin__hr {
+  width: 60%;
+}
+@media (min-width: 426px) and (max-width: 1023px) {
+  .column__mixin__hr {
+    width: 100%;
+  }
+}
 .button__mixin {
   align-self: center;
   color: #111111;
@@ -169,6 +177,14 @@ body .tri-column .streaming-release {
     padding-left: 8px;
   }
 }
+body .tri-column .streaming-release__hr {
+  width: 60%;
+}
+@media (min-width: 426px) and (max-width: 1023px) {
+  body .tri-column .streaming-release__hr {
+    width: 100%;
+  }
+}
 @media (min-width: 426px) and (max-width: 1023px) {
   body .tri-column .streaming-release .releases {
     display: flex;
@@ -181,7 +197,7 @@ body .tri-column .streaming-release {
 }
 body .tri-column .streaming-release .release {
   display: grid;
-  grid-template-columns: 1fr 2fr 0.5fr;
+  grid-template-columns: 1fr 1.5fr 0.5fr;
   grid-template-rows: 2;
   width: 80%;
   margin: auto;
@@ -213,6 +229,26 @@ body .tri-column .streaming-release .release .release__date {
   grid-row: 2 / span 1;
   padding-left: 8px;
 }
+body .tri-column .streaming-release .release .icon-container {
+  grid-column: 3 / span 1;
+  grid-row: 1 / span 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 426px) and (max-width: 1023px) {
+  body .tri-column .streaming-release .release .icon-container {
+    margin-left: 16px;
+  }
+}
+body .tri-column .streaming-release .release .icon-container .fa-circle-play {
+  display: block;
+  color: #EEF7FF;
+}
+body .tri-column .streaming-release .release .icon-container .fa-circle-play:hover {
+  color: #CE83DE;
+  cursor: pointer;
+}
 body .tri-column .upcoming-performances {
   flex-direction: column;
   flex-basis: calc(33.33% - 64px);
@@ -242,6 +278,14 @@ body .tri-column .upcoming-performances {
     padding-left: 8px;
   }
 }
+body .tri-column .upcoming-performances__hr {
+  width: 60%;
+}
+@media (min-width: 426px) and (max-width: 1023px) {
+  body .tri-column .upcoming-performances__hr {
+    width: 100%;
+  }
+}
 @media (min-width: 426px) and (max-width: 1023px) {
   body .tri-column .upcoming-performances .performances {
     display: flex;
@@ -251,17 +295,6 @@ body .tri-column .upcoming-performances {
     white-space: nowrap;
     /* Prevent line breaks for horizontal list */
   }
-}
-body .tri-column .upcoming-performances__hr {
-  width: 60%;
-}
-@media (min-width: 426px) and (max-width: 1023px) {
-  body .tri-column .upcoming-performances__hr {
-    width: 100%;
-  }
-}
-body .tri-column .upcoming-performances__hr {
-  width: 60%;
 }
 body .tri-column .upcoming-performances .performance {
   display: grid;
@@ -382,6 +415,14 @@ body .tri-column .merchandise {
     padding-left: 8px;
   }
 }
+body .tri-column .merchandise__hr {
+  width: 60%;
+}
+@media (min-width: 426px) and (max-width: 1023px) {
+  body .tri-column .merchandise__hr {
+    width: 100%;
+  }
+}
 @media (min-width: 426px) and (max-width: 1023px) {
   body .tri-column .merchandise {
     display: grid;
@@ -402,7 +443,6 @@ body .tri-column .merchandise .merchandise__hr {
   grid-column: 1 / span 2;
   grid-row: 2 / span 1;
   margin: 0 auto;
-  width: 75%;
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   body .tri-column .merchandise .merchandise__hr {
