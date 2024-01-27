@@ -282,16 +282,13 @@ body {
                     flex-direction: row;
                     align-items:center;
                     justify-content:flex-start;
-                        
-                    .temp--active {
-                        color: green;
-
+                    &--active i {
+                        color: green; /* Color for tickets available */
                     }
                 
-                    .temp--inactive {                            
-                        color: red;
-
-                    }                     
+                    &--inactive i {
+                        color: red; /* Color for tickets unavailable */
+                    }                  
                                     
                     p {
                         font-size: 12px;
