@@ -339,10 +339,31 @@ body .tri-column .upcoming-performances .performance__location {
 body .tri-column .upcoming-performances .performance__ticket-availability {
   grid-column: 1 / span 1;
   grid-row: 3 / span 1;
-  font-size: 12px;
+  display: flex;
+  flex-direction: row;
   text-align: left;
   margin-block-start: 0.5em;
   margin-block-end: 0.5em;
+}
+body .tri-column .upcoming-performances .performance__ticket-availability .temp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .tri-column .upcoming-performances .performance__ticket-availability .temp--active {
+  color: green;
+}
+body .tri-column .upcoming-performances .performance__ticket-availability .temp--active i {
+  margin: 8px;
+}
+body .tri-column .upcoming-performances .performance__ticket-availability .temp--inactive {
+  color: red;
+}
+body .tri-column .upcoming-performances .performance__ticket-availability .temp--inactive i {
+  margin: 8px;
+}
+body .tri-column .upcoming-performances .performance__ticket-availability p {
+  font-size: 12px;
 }
 body .tri-column .upcoming-performances .performance__date {
   grid-column: 2 / span 1;
