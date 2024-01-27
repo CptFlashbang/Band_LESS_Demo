@@ -244,6 +244,7 @@ body .tri-column .streaming-release .release .icon-container {
 body .tri-column .streaming-release .release .icon-container .fa-circle-play {
   display: block;
   color: #EEF7FF;
+  transition: color 0.3s ease;
 }
 body .tri-column .streaming-release .release .icon-container .fa-circle-play:hover {
   color: #CE83DE;
