@@ -347,11 +347,13 @@ body .tri-column .upcoming-performances .performance__ticket-availability {
   margin-block-start: 0.5em;
   margin-block-end: 0.5em;
 }
-body .tri-column .upcoming-performances .performance__ticket-availability .temp--active {
+body .tri-column .upcoming-performances .performance__ticket-availability--active i {
   color: green;
+  /* Color for tickets available */
 }
-body .tri-column .upcoming-performances .performance__ticket-availability .temp--inactive {
+body .tri-column .upcoming-performances .performance__ticket-availability--inactive i {
   color: red;
+  /* Color for tickets unavailable */
 }
 body .tri-column .upcoming-performances .performance__ticket-availability p {
   font-size: 12px;
