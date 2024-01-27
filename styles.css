@@ -361,6 +361,7 @@ body .tri-column .merchandise {
   border-radius: 10px;
   width: 90%;
   margin: 0 auto;
+  display: grid;
   border: 8px solid #75AAB9;
 }
 @media (min-width: 426px) and (max-width: 1023px) {
@@ -381,9 +382,21 @@ body .tri-column .merchandise {
     padding-left: 8px;
   }
 }
+@media (min-width: 426px) and (max-width: 1023px) {
+  body .tri-column .merchandise {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+}
 body .tri-column .merchandise .merchandise__h1 {
   grid-column: 1 / span 2;
   grid-row: 1 / span 1;
+}
+@media (min-width: 426px) and (max-width: 1023px) {
+  body .tri-column .merchandise .merchandise__h1 {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+  }
 }
 body .tri-column .merchandise .merchandise__hr {
   grid-column: 1 / span 2;
@@ -391,18 +404,28 @@ body .tri-column .merchandise .merchandise__hr {
   margin: 0 auto;
   width: 75%;
 }
+@media (min-width: 426px) and (max-width: 1023px) {
+  body .tri-column .merchandise .merchandise__hr {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 1;
+  }
+}
 body .tri-column .merchandise .merchandise-items {
   display: grid;
+  grid-column: 1 / span 2;
+  grid-row: 4 / span 1;
   grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
   grid-template-rows: 3fr 3fr;
   box-sizing: border-box;
-  margin-top: 32px;
+  margin-top: 8px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0px;
 }
 @media (min-width: 426px) and (max-width: 1023px) {
   body .tri-column .merchandise .merchandise-items {
+    grid-column: 1 / span 2;
+    grid-row: 3 / span 1;
     display: flex;
     flex-direction: row;
     overflow-x: auto;
@@ -428,6 +451,7 @@ body .tri-column .merchandise .merchandise-items .merchandise-item {
 @media (min-width: 426px) and (max-width: 1023px) {
   body .tri-column .merchandise .merchandise-items .merchandise-item {
     margin: 8px;
+    height: 260px;
   }
 }
 body .tri-column .merchandise .merchandise-items .merchandise-item:nth-child(1) {
@@ -468,6 +492,13 @@ body .tri-column .merchandise .merchandise-items .merchandise-item .merchandise-
   color: #111111;
 }
 body .tri-column .merchandise .merchandise-items__shop-button {
+  grid-column: 1 / span 2;
+  grid-row: 3 / span 1;
+  width: 40%;
+  margin-top: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 8px;
   align-self: center;
   color: #111111;
   padding: 8px 2px;
@@ -485,6 +516,12 @@ body .tri-column .merchandise .merchandise-items__shop-button--active:hover {
 body .tri-column .merchandise .merchandise-items__shop-button--inactive {
   background-color: #838383;
   color: #EEF7FF;
+}
+@media (min-width: 426px) and (max-width: 1023px) {
+  body .tri-column .merchandise .merchandise-items__shop-button {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+  }
 }
 body hr:last-child {
   margin-bottom: 80px;
