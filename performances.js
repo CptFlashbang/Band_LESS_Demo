@@ -10,5 +10,12 @@ function createPerformanceElements(performances) {
 
     performances.forEach(performance => {
 
+    let ticketAvailabilityClass;
+    if (performance.ticketsAvailable) {
+        ticketAvailabilityClass = 'performance__ticket-availability--active';
+    } else {
+        ticketAvailabilityClass = 'performance__ticket-availability--inactive';
+    }
+    
     });
 }
