@@ -24,5 +24,24 @@ function createPerformanceElements(performances) {
         buttonClass = 'performance__buy-button--inactive';
     }
 
+    performanceElement.innerHTML = `
+    <h2 class="performance__venue">${performance.venue}</h2>
+    <p class="performance__location">${performance.location}</p>
+    <div class="performance__ticket-availability ${ticketAvailabilityClass}">
+        <i class="fa-solid fa-ticket"></i>
+        <p>
+            ${(() => {
+                if (performance.ticketsAvailable) {
+                    return 'Tickets Available';
+                } else {
+                    return 'Tickets Unavailable';
+                }
+            })()}
+        </p>
+    </div>
+    <p class="performance__date">${performance.date}</p>
+    <button class="performance__buy-button ${buttonClass}">Buy Now</button>
+`;
+
     });
 }
