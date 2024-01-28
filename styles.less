@@ -136,14 +136,14 @@ body {
         
     }
 
-    .toggle-container {
+    .mid-toggle-container {
         display: flex;
         justify-content: center;
     
         input[type="checkbox"] {
             display: none;
     
-            &:checked + .toggle-label {
+            &:checked + .mid-toggle-container__toggle-label {
                 background-color: green;
                 i.fa-eye {
                     visibility: visible;
@@ -155,7 +155,7 @@ body {
                     color: red;
                 }
             }
-            &:not(:checked) + .toggle-label {
+            &:not(:checked) + .mid-toggle-container__toggle-label {
                 background-color: red;
                 i.fa-eye {
                     visibility: hidden;
@@ -170,7 +170,7 @@ body {
             }
         }
     
-        .toggle-label {
+        .mid-toggle-container__toggle-label {
             //width: 60px;
             margin: 8px auto;
             height: 20px;
