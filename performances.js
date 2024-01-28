@@ -43,7 +43,7 @@ function createPerformanceElements(performances) {
     <button class="performance__buy-button ${buttonClass}">Buy Now</button>
     `;
 
-    
+    performancesContainer.appendChild(performanceElement);
 
     });
 }
