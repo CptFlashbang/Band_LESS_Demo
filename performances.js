@@ -18,11 +18,11 @@ function createPerformanceElements(performances) {
     }
 
     let buttonClass;
-        if (performance.ticketsAvailable) {
-            buttonClass = 'performance__buy-button--active';
-        } else {
-            buttonClass = 'performance__buy-button--inactive';
-        }
+    if (performance.ticketsAvailable) {
+        buttonClass = 'performance__buy-button--active';
+    } else {
+        buttonClass = 'performance__buy-button--inactive';
+    }
 
     });
 }
