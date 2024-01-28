@@ -1,5 +1,0 @@
-TODO:
-	Github commits
-	fontawesome
-	class names & matching CS
-    javascript
