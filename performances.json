@@ -1,0 +1,26 @@
+[
+    {
+        "venue": "The Olde England",
+        "location": "Wellingborough",
+        "ticketsAvailable": true,
+        "date": "16/02"
+    },
+    {
+        "venue": "The Griffard Arms",
+        "location": "Wolverhampton",
+        "ticketsAvailable": true,
+        "date": "09/03"
+    },
+    {
+        "venue": "The Rigger",
+        "location": "Stoke-on-Trent",
+        "ticketsAvailable": false,
+        "date": "11/04"
+    },
+    {
+        "venue": "Alma",
+        "location": "Bolton",
+        "ticketsAvailable": false,
+        "date": "18/04"
+    }
+]
