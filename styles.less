@@ -1,12 +1,13 @@
-#colors() {
+#ColorsandFont() {
     @CLKWRK_Black: #111111;
     @CLKWRK_White: #EEF7FF;
     @CLKWRK_Charcoal: #1F1F1F;
     @CLKWRK_Grey: #838383;
     @CLKWRK_Blue: #75AAB9;
     @CLKWRK_Pink: #CE83DE;
+    @Roboto: 'Roboto', sans-serif;
 }
-#colors();
+#ColorsandFont();
 
 .column__mixin{
     flex-direction: column;
@@ -68,7 +69,7 @@ body {
     width: 90%;
     margin: 0 auto;
     background-color: @CLKWRK_Black;
-    font-family: 'Roboto', sans-serif;
+    font-family: @Roboto;
     box-sizing: border-box;
         @media (min-width: 426px) and (max-width: 1023px) {
         width: 100%;
