@@ -11,7 +11,7 @@ function createPerformanceElements(performances) {
     performances.forEach(performance => {
         const performanceElement = document.createElement('div');
         performanceElement.classList.add('performance');
-        
+
         let ticketAvailabilityClass;
         if (performance.ticketsAvailable) {
             ticketAvailabilityClass = 'performance__ticket-availability--active';
@@ -47,5 +47,8 @@ function createPerformanceElements(performances) {
 
         performancesContainer.appendChild(performanceElement);
 
+        const hrElement = document.createElement('hr');
+        hrElement.classList.add('upcoming-performances__hr');
+        performancesContainer.appendChild(hrElement);
     });
 }
