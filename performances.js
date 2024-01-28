@@ -16,6 +16,13 @@ function createPerformanceElements(performances) {
     } else {
         ticketAvailabilityClass = 'performance__ticket-availability--inactive';
     }
-    
+
+    let buttonClass;
+        if (performance.ticketsAvailable) {
+            buttonClass = 'performance__buy-button--active';
+        } else {
+            buttonClass = 'performance__buy-button--inactive';
+        }
+
     });
 }
