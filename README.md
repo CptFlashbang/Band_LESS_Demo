@@ -1,4 +1,4 @@
-# ClickDealerSkillsTest
+# WebDevSkillsTest
 Skills test for a web development firm
 
 LESSCSS Command: 
