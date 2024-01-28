@@ -43,10 +43,12 @@ function Method2() {
 
 function hideMiddleColumn() {
     var middleElement = Method2();
-    middleElement.style.display = 'none';
+    //middleElement.style.display = 'none';
+    middleElement.style.visibility = 'hidden';
 }
 
 function showMiddleColumn() {
     var middleElement = Method2();
-    middleElement.style.display = '';
+    //middleElement.style.display = '';
+    middleElement.style.visibility = 'visible';
 }
