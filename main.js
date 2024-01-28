@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     console.log("Javascript loaded.");
 
-    // Assign the checkbox variable inside the DOMContentLoaded event
     var checkbox = document.getElementById('toggleSwitch');
 
     //"Output the middle element" is open to interpretation, so I included multiple approaches.
