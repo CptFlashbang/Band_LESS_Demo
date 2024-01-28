@@ -41,7 +41,9 @@ function createPerformanceElements(performances) {
     </div>
     <p class="performance__date">${performance.date}</p>
     <button class="performance__buy-button ${buttonClass}">Buy Now</button>
-`;
+    `;
+
+    
 
     });
 }
