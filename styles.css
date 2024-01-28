@@ -113,7 +113,6 @@ body .hero .hero__paragraph {
 body .toggle-container {
   display: flex;
   justify-content: center;
-  /* Center horizontally */
 }
 body .toggle-container input[type="checkbox"] {
   display: none;
@@ -156,16 +155,17 @@ body .toggle-container .toggle-label {
 }
 body .toggle-container .toggle-label i {
   margin-left: 4px;
-  /* Margin on the left for the open eye */
   margin-right: 4px;
-  /* Margin on the right for the closed eye */
   color: #111111;
 }
 body .tri-column {
   display: flex;
   flex-direction: row;
   width: 90%;
-  margin: 8px auto;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  margin-left: auto;
+  margin-right: auto;
   justify-content: center;
 }
 @media (min-width: 426px) and (max-width: 1023px) {
@@ -275,12 +275,16 @@ body .tri-column .streaming-release .release .icon-container {
     margin-left: 16px;
   }
 }
-body .tri-column .streaming-release .release .icon-container .fa-circle-play {
+body .tri-column .streaming-release .release .icon-container a {
+  color: inherit;
+  text-decoration: none;
+}
+body .tri-column .streaming-release .release .icon-container a .fa-circle-play {
   display: block;
   color: #EEF7FF;
   transition: color 0.3s ease;
 }
-body .tri-column .streaming-release .release .icon-container .fa-circle-play:hover {
+body .tri-column .streaming-release .release .icon-container a .fa-circle-play:hover {
   color: #CE83DE;
   cursor: pointer;
 }
@@ -326,9 +330,7 @@ body .tri-column .upcoming-performances__hr {
     display: flex;
     flex-direction: row;
     overflow-x: auto;
-    /* Enable horizontal scrolling */
     white-space: nowrap;
-    /* Prevent line breaks for horizontal list */
   }
 }
 body .tri-column .upcoming-performances .performance {
@@ -383,11 +385,9 @@ body .tri-column .upcoming-performances .performance__ticket-availability {
 }
 body .tri-column .upcoming-performances .performance__ticket-availability--active i {
   color: green;
-  /* Color for tickets available */
 }
 body .tri-column .upcoming-performances .performance__ticket-availability--inactive i {
   color: red;
-  /* Color for tickets unavailable */
 }
 body .tri-column .upcoming-performances .performance__ticket-availability p {
   font-size: 12px;
@@ -519,9 +519,7 @@ body .tri-column .merchandise .merchandise-items {
     display: flex;
     flex-direction: row;
     overflow-x: auto;
-    /* Enable horizontal scrolling */
     white-space: nowrap;
-    /* Prevent line breaks for horizontal list */
     margin-top: 8px;
     margin-left: auto;
     margin-right: auto;
