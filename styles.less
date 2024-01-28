@@ -46,13 +46,6 @@
     border: none;
     border-radius: 16px;
     transition: background-color 0.3s ease;
-    //width: 72px;
-    @media (min-width: 426px) and (max-width: 1023px) {
-        //margin-top: 32px;
-    }
-    @media (max-width: 767px) {
-        //margin: 16px auto;
-    }
 
     &--active {
         background-color: @CLKWRK_Pink;
@@ -88,18 +81,7 @@ body {
         color: @CLKWRK_White;
     }
     hr:first-child {
-        margin-top: 80px;
-        @media (min-width: 426px) and (max-width: 1023px) {
-            margin-top: 32px;
-        }
-        @media (max-width: 767px) {
-            margin-top: 32px;
-        }
-    }
-    hr{
-        @media (min-width: 426px) and (max-width: 1023px) {
-            width: 90%;
-        }
+        margin-top: 32px;
     }
     
         
@@ -136,7 +118,7 @@ body {
 
     .toggle-container {
         display: flex;
-        justify-content: center; /* Center horizontally */
+        justify-content: center;
     
         input[type="checkbox"] {
             display: none;
@@ -145,7 +127,7 @@ body {
                 background-color: green;
                 i.fa-eye {
                     visibility: visible;
-                    transition: color 1.5s ease;
+                    transition: color 1s ease;
                     color: @CLKWRK_Black;
                 }
                 i.fa-eye-slash {
@@ -162,7 +144,7 @@ body {
     
                 i.fa-eye-slash {
                     visibility: visible;
-                    transition: color 1.5s ease;
+                    transition: color 1s ease;
                     color: @CLKWRK_Black;
                 }
             }
@@ -170,11 +152,11 @@ body {
     
         .toggle-label {
             //width: 60px;
+            margin: 8px auto;
             height: 20px;
             background-color: red;
             border-radius: 10px;
-            cursor: pointer;
-            //transition: background-color 0.3s ease;            
+            cursor: pointer;         
             
             display: flex;
             flex-direction: row;
@@ -182,8 +164,8 @@ body {
             border: 2px solid @CLKWRK_White;
             border-radius: 16px;
             i {
-                margin-left: 4px; /* Margin on the left for the open eye */
-                margin-right: 4px; /* Margin on the right for the closed eye */
+                margin-left: 4px;
+                margin-right: 4px;
                 color: @CLKWRK_Black;
             }
         }
@@ -194,16 +176,15 @@ body {
         display: flex;
         flex-direction: row;
         width: 90%;
-        margin: 32px auto;
+        margin: 8px auto;
         justify-content: center;
         @media (min-width: 426px) and (max-width: 1023px) {
             flex-direction: column;
             width: 100%;
-            
         }
         @media (max-width: 767px) {
             flex-direction: column;
-            margin-top: 16px;
+            margin-top: 8px;
             margin-bottom: 16px;
             width: calc(100% + 6%);
             margin-left: -3%;
@@ -218,8 +199,8 @@ body {
                 @media (min-width: 426px) and (max-width: 1023px) {
                     display: flex;
                     flex-direction: row;
-                    overflow-x: auto; /* Enable horizontal scrolling */
-                    white-space: nowrap; /* Prevent line breaks for horizontal list */
+                    overflow-x: auto;
+                    white-space: nowrap;
                 }
             }
             .release {
@@ -286,8 +267,8 @@ body {
                 @media (min-width: 426px) and (max-width: 1023px) {
                     display: flex;
                     flex-direction: row;
-                    overflow-x: auto; /* Enable horizontal scrolling */
-                    white-space: nowrap; /* Prevent line breaks for horizontal list */
+                    overflow-x: auto;
+                    white-space: nowrap;
                 }
                 
             }
@@ -295,15 +276,11 @@ body {
             .performance {
                 display: grid;
                 grid-template-columns: 3fr 1fr;
-                //grid-template-rows: 1fr;
                 width: 70%;
                 margin: 1em auto;
                 @media (min-width: 426px) and (max-width: 1023px) {
                     margin-left: 48px;
                     margin-right: 48px;
-                }
-                @media (max-width: 767px) {
-                    //width: 95%;
                 }
                 .venue_mixin{
                     text-align: left;
@@ -338,11 +315,11 @@ body {
                     align-items:center;
                     justify-content:flex-start;
                     &--active i {
-                        color: green; /* Color for tickets available */
+                        color: green;
                     }
                 
                     &--inactive i {
-                        color: red; /* Color for tickets unavailable */
+                        color: red;
                     }                  
                                     
                     p {
@@ -420,7 +397,6 @@ body {
                 grid-template-rows: 3fr 3fr;
 
                 box-sizing: border-box;  
-                //margin: 32px auto;
                 margin-top: 8px;
                 margin-left: auto;
                 margin-right: auto;
@@ -430,8 +406,8 @@ body {
                     grid-row: 3 / span 1;
                     display: flex;
                     flex-direction: row;
-                    overflow-x: auto; /* Enable horizontal scrolling */
-                    white-space: nowrap; /* Prevent line breaks for horizontal list */
+                    overflow-x: auto;
+                    white-space: nowrap;
                     margin-top: 8px;
                     margin-left: auto;
                     margin-right: auto;
@@ -496,8 +472,6 @@ body {
                 margin-right: auto;
                 margin-bottom: 8px;
                 .button__mixin;
-
-                //margin-bottom: 32px;
                 @media (min-width: 426px) and (max-width: 1023px) {
                     grid-column: 2 / span 1;
                     grid-row: 1 / span 1;

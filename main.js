@@ -1,25 +1,53 @@
 document.addEventListener('DOMContentLoaded', function () {
     console.log("Javascript loaded.");
 
+    // Assign the checkbox variable inside the DOMContentLoaded event
+    var checkbox = document.getElementById('toggleSwitch');
+
     //"Output the middle element" is open to interpretation, so I included multiple approaches.
 
-    //Method 1 retrieves the element specifically.
-    console.log('Middle Element:', Method1())
-    //Method 2 finds the middle element of the tri-column parent element
-    console.log('Middle Element:', Method2())
+    // Method 1 retrieves the element specifically.
+    console.log('Middle Element:', Method1());
+    // Method 2 finds the middle element of the tri-column parent element
+    console.log('Middle Element:', Method2());
+
+    if (checkbox.checked) {
+        showMiddleColumn();
+    } else {
+        hideMiddleColumn();
+    }
+
+    checkbox.addEventListener('change', function () {
+        if (checkbox.checked) {
+            showMiddleColumn();
+        } else {
+            hideMiddleColumn();
+        }
+    });
 });
+
 
 function Method1() {
     const performances = document.querySelectorAll('.upcoming-performances');
     var middleElement = performances[0]
     return middleElement
-  };
+};
 
 function Method2() {
     var parentElement = document.getElementById("tri-column");
     var topLevelChildren = Array.from(parentElement.children);
     var length = topLevelChildren.length;
     var middleposition = Math.round(length / 2);
-    var middleElement = topLevelChildren[middleposition]
+    var middleElement = topLevelChildren[(middleposition - 1)]
     return middleElement
- };
+};
+
+function hideMiddleColumn() {
+    var middleElement = Method2();
+    middleElement.style.display = 'none';
+}
+
+function showMiddleColumn() {
+    var middleElement = Method2();
+    middleElement.style.display = '';
+}
