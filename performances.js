@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", function() {
         .catch(error => console.error('Error fetching JSON:', error));
 });
 
-function createPerformanceElements() {
+function createPerformanceElements(performances) {
     const performancesContainer = document.getElementById('performances');
+
+
 }
