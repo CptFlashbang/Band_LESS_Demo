@@ -77,7 +77,7 @@ body {
     background-color: @CLKWRK_Black;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
-    @media (min-width: 426px) and (max-width: 1023px) {
+        @media (min-width: 426px) and (max-width: 1023px) {
         width: 100%;
     }
     @media (max-width: 767px) {
@@ -133,6 +133,32 @@ body {
             }
         }
         
+    }
+
+    .toggle-container {
+        position: relative;
+        display: inline-block;
+        input[type="checkbox"] {
+            display: none;
+    
+            //When toggle.container is checked, select .toggle-label and apply the new background colour
+            &:checked + .toggle-label {
+                background-color: #2196F3;
+            }
+        }
+    
+        .toggle-label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40px;
+            height: 20px;
+            background-color: #ccc;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            
+        }
     }
 
     .tri-column {
