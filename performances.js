@@ -8,5 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
 function createPerformanceElements(performances) {
     const performancesContainer = document.getElementById('performances');
 
+    performances.forEach(performance => {
 
+    });
 }
