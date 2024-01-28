@@ -125,6 +125,56 @@ body .hero .hero__paragraph {
     grid-column: 1 / span 1;
   }
 }
+body .toggle-container {
+  display: flex;
+  justify-content: center;
+  /* Center horizontally */
+}
+body .toggle-container input[type="checkbox"] {
+  display: none;
+}
+body .toggle-container input[type="checkbox"]:checked + .toggle-label {
+  background-color: green;
+}
+body .toggle-container input[type="checkbox"]:checked + .toggle-label i.fa-eye {
+  visibility: visible;
+  transition: color 1.5s ease;
+  color: #111111;
+}
+body .toggle-container input[type="checkbox"]:checked + .toggle-label i.fa-eye-slash {
+  visibility: hidden;
+  color: red;
+}
+body .toggle-container input[type="checkbox"]:not(:checked) + .toggle-label {
+  background-color: red;
+}
+body .toggle-container input[type="checkbox"]:not(:checked) + .toggle-label i.fa-eye {
+  visibility: hidden;
+  color: green;
+}
+body .toggle-container input[type="checkbox"]:not(:checked) + .toggle-label i.fa-eye-slash {
+  visibility: visible;
+  transition: color 1.5s ease;
+  color: #111111;
+}
+body .toggle-container .toggle-label {
+  height: 20px;
+  background-color: red;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 2px solid #EEF7FF;
+  border-radius: 16px;
+}
+body .toggle-container .toggle-label i {
+  margin-left: 4px;
+  /* Margin on the left for the open eye */
+  margin-right: 4px;
+  /* Margin on the right for the closed eye */
+  color: #111111;
+}
 body .tri-column {
   display: flex;
   flex-direction: row;
