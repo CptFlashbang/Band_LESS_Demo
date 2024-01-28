@@ -1,5 +1,5 @@
 # ClickDealerSkillsTest
-Skills test for the web development firm ClickDealer
+Skills test for a web development firm
 
 LESSCSS Command: 
 
