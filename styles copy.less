@@ -1,30 +1,30 @@
 .column__mixin{
-    background-color: @Tertiary-Color;
+    background-color: @Light_Tertiary;
 }
 .button__mixin {
-    color: @Primary-Color;
+    color: @Light_Primary;
     &--active {
-        background-color: @Highlight-Color-2;
+        background-color: @Light_Highlight-2;
         &:hover {
-            background-color: @Highlight-Color-1;
+            background-color: @Light_Highlight-1;
         }
     }
     &--inactive {
-        background-color: @Tertiary-Color-2;
-        color: @Secondary-Color;
+        background-color: @Light_Tertiary-2;
+        color: @Light_Secondary;
     }
 }
 body {
-    background-color: @Primary-Color;
+    background-color: blueviolet;
     h1, h2, p {
-        color: @Secondary-Color;
+        color: @Light_Secondary;
     }
     .mid-toggle-container {
         input[type="checkbox"] {
             &:checked + .mid-toggle-container__toggle-label {
                 background-color: green;
                 i.fa-eye {
-                    color: @Primary-Color;
+                    color: @Light_Primary;
                 }
                 i.fa-eye-slash {
                     color: red;
@@ -37,30 +37,30 @@ body {
                 }
     
                 i.fa-eye-slash {
-                    color: @Primary-Color;
+                    color: @Light_Primary;
                 }
             }
         }    
         .mid-toggle-container__toggle-label {
             background-color: red;
-            border: 2px solid @Secondary-Color;
+            border: 2px solid @Light_Secondary;
             i {
-                color: @Primary-Color;
+                color: @Light_Primary;
             }
         }
     }  
     .tri-column {
         .streaming-release {
             .column__mixin;
-            border: 8px solid @Highlight-Color-1;
+            border: 8px solid @Light_Highlight-1;
             .release {
                 .icon-container{
                     a{
                         color: inherit;
                         .fa-circle-play{                        
-                            color: @Secondary-Color;
+                            color: @Light_Secondary;
                             &:hover {
-                                color: @Highlight-Color-2;
+                                color: @Light_Highlight-2;
                             }
                         }
                     }                    
@@ -70,7 +70,7 @@ body {
 
         .upcoming-performances {
             .column__mixin;
-            border: 8px solid @Highlight-Color-2;
+            border: 8px solid @Light_Highlight-2;
             .performance {
                 &__ticket-availability {
                     &--active i {
@@ -84,12 +84,12 @@ body {
         }
         .merchandise {
             .column__mixin;
-            border: 8px solid @Highlight-Color-1;
+            border: 8px solid @Light_Highlight-1;
             .merchandise-items {
                 .merchandise-item {                    
-                    background-color: @Tertiary-Color-2;                    
+                    background-color: @Light_Tertiary-2;                    
                     .merch_mixin{
-                        color: @Primary-Color;
+                        color: @Light_Primary;
                     }
                     .merchandise-item__name {
                         .merch_mixin

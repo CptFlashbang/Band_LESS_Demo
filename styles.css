@@ -78,6 +78,10 @@ body p {
 body hr:first-child {
   margin-top: 32px;
 }
+body hr {
+  height: 2px;
+  background-color: #EEF7FF;
+}
 body .hero {
   display: grid;
   grid-template-columns: auto;
@@ -91,7 +95,8 @@ body .hero {
   }
 }
 body .hero .hero__image {
-  grid-area: 1 / 1 / span 3 / span 1;
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 3;
   align-self: center;
 }
 @media (max-width: 767px) {
@@ -613,4 +618,99 @@ body .tri-column .merchandise .merchandise-items__shop-button--inactive {
 }
 body hr:last-child {
   margin-bottom: 80px;
+}
+.light-mode {
+  background-color: #FFFFFF;
+}
+.light-mode .column__mixin {
+  background-color: #CCCCCC;
+}
+.light-mode .button__mixin {
+  color: #FFFFFF;
+}
+.light-mode .button__mixin--active {
+  background-color: #9F297D;
+}
+.light-mode .button__mixin--active:hover {
+  background-color: #3C8AEF;
+}
+.light-mode .button__mixin--inactive {
+  background-color: #1F1F1F;
+  color: #111111;
+}
+.light-mode h1,
+.light-mode h2,
+.light-mode p {
+  color: #111111;
+}
+.light-mode hr {
+  height: 2px;
+  background-color: #111111;
+}
+.light-mode .mid-toggle-container input[type="checkbox"]:checked + .mid-toggle-container__toggle-label {
+  background-color: green;
+}
+.light-mode .mid-toggle-container input[type="checkbox"]:checked + .mid-toggle-container__toggle-label i.fa-eye {
+  color: #FFFFFF;
+}
+.light-mode .mid-toggle-container input[type="checkbox"]:checked + .mid-toggle-container__toggle-label i.fa-eye-slash {
+  color: red;
+}
+.light-mode .mid-toggle-container input[type="checkbox"]:not(:checked) + .mid-toggle-container__toggle-label {
+  background-color: red;
+}
+.light-mode .mid-toggle-container input[type="checkbox"]:not(:checked) + .mid-toggle-container__toggle-label i.fa-eye {
+  color: green;
+}
+.light-mode .mid-toggle-container input[type="checkbox"]:not(:checked) + .mid-toggle-container__toggle-label i.fa-eye-slash {
+  color: #FFFFFF;
+}
+.light-mode .mid-toggle-container .mid-toggle-container__toggle-label {
+  background-color: red;
+  border: 2px solid #111111;
+}
+.light-mode .mid-toggle-container .mid-toggle-container__toggle-label i {
+  color: #FFFFFF;
+}
+.light-mode .tri-column .streaming-release {
+  background-color: #CCCCCC;
+  border: 8px solid #3C8AEF;
+}
+.light-mode .tri-column .streaming-release .release .icon-container a {
+  color: inherit;
+}
+.light-mode .tri-column .streaming-release .release .icon-container a .fa-circle-play {
+  color: #111111;
+}
+.light-mode .tri-column .streaming-release .release .icon-container a .fa-circle-play:hover {
+  color: #9F297D;
+}
+.light-mode .tri-column .upcoming-performances {
+  background-color: #CCCCCC;
+  border: 8px solid #9F297D;
+}
+.light-mode .tri-column .upcoming-performances .performance__ticket-availability--active i {
+  color: green;
+}
+.light-mode .tri-column .upcoming-performances .performance__ticket-availability--inactive i {
+  color: red;
+}
+.light-mode .tri-column .merchandise {
+  background-color: #CCCCCC;
+  border: 8px solid #3C8AEF;
+}
+.light-mode .tri-column .merchandise .merchandise-items .merchandise-item {
+  background-color: #1F1F1F;
+}
+.light-mode .tri-column .merchandise .merchandise-items .merchandise-item .merch_mixin {
+  color: #FFFFFF;
+}
+.light-mode .tri-column .merchandise .merchandise-items .merchandise-item .merchandise-item__name {
+  color: #FFFFFF;
+}
+.light-mode .tri-column .merchandise .merchandise-items .merchandise-item .merchandise-item__colour {
+  color: #FFFFFF;
+}
+.light-mode .tri-column .merchandise .merchandise-items .merchandise-item .merchandise-item__price {
+  color: #FFFFFF;
 }
