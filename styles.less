@@ -491,7 +491,7 @@ body {
 
 .light-mode{
     .column__mixin{
-        background-color: @Light_Tertiary;
+    background-color: @Light_Tertiary;
     }
     .button__mixin {
         color: @Light_Primary;
@@ -506,98 +506,95 @@ body {
             color: @Light_Secondary;
         }
     }
-    body {
-        background-color: @Light_Primary;
-        h1, h2, p {
-            color: @Light_Secondary;
-        }
-        .mid-toggle-container {
-            input[type="checkbox"] {
-                &:checked + .mid-toggle-container__toggle-label {
-                    background-color: green;
-                    i.fa-eye {
-                        color: @Light_Primary;
-                    }
-                    i.fa-eye-slash {
-                        color: red;
-                    }
+    background-color: @Light_Primary;
+    h1, h2, p {
+        color: @Light_Secondary;
+    }
+    .mid-toggle-container {
+        input[type="checkbox"] {
+            &:checked + .mid-toggle-container__toggle-label {
+                background-color: green;
+                i.fa-eye {
+                    color: @Light_Primary;
                 }
-                &:not(:checked) + .mid-toggle-container__toggle-label {
-                    background-color: red;
-                    i.fa-eye {
-                        color: green;
-                    }
-        
-                    i.fa-eye-slash {
-                        color: @Light_Primary;
-                    }
+                i.fa-eye-slash {
+                    color: red;
                 }
-            }    
-            .mid-toggle-container__toggle-label {
+            }
+            &:not(:checked) + .mid-toggle-container__toggle-label {
                 background-color: red;
-                border: 2px solid @Light_Secondary;
-                i {
+                i.fa-eye {
+                    color: green;
+                }
+    
+                i.fa-eye-slash {
                     color: @Light_Primary;
                 }
             }
-        }  
-        .tri-column {
-            .streaming-release {
-                .column__mixin;
-                border: 8px solid @Light_Highlight-1;
-                .release {
-                    .icon-container{
-                        a{
-                            color: inherit;
-                            .fa-circle-play{                        
-                                color: @Light_Secondary;
-                                &:hover {
-                                    color: @Light_Highlight-2;
-                                }
+        }    
+        .mid-toggle-container__toggle-label {
+            background-color: red;
+            border: 2px solid @Light_Secondary;
+            i {
+                color: @Light_Primary;
+            }
+        }
+    }  
+    .tri-column {
+        .streaming-release {
+            .column__mixin;
+            border: 8px solid @Light_Highlight-1;
+            .release {
+                .icon-container{
+                    a{
+                        color: inherit;
+                        .fa-circle-play{                        
+                            color: @Light_Secondary;
+                            &:hover {
+                                color: @Light_Highlight-2;
                             }
-                        }                    
-                    }
-                }
-            }
-    
-            .upcoming-performances {
-                .column__mixin;
-                border: 8px solid @Light_Highlight-2;
-                .performance {
-                    &__ticket-availability {
-                        &--active i {
-                            color: green;
-                        }                
-                        &--inactive i {
-                            color: red;
-                        }                  
-                    }
-                }
-            }
-            .merchandise {
-                .column__mixin;
-                border: 8px solid @Light_Highlight-1;
-                .merchandise-items {
-                    .merchandise-item {                    
-                        background-color: @Light_Tertiary-2;                    
-                        .merch_mixin{
-                            color: @Light_Primary;
-                        }
-                        .merchandise-item__name {
-                            .merch_mixin
-                        }
-    
-                        .merchandise-item__colour {
-                            .merch_mixin
-                        }
-    
-                        .merchandise-item__price {
-                            .merch_mixin
-                        }
-                    }                
+}
+                    }                    
                 }
             }
         }
-    }
-    
+
+        .upcoming-performances {
+            .column__mixin;
+            border: 8px solid @Light_Highlight-2;
+            .performance {
+                &__ticket-availability {
+                    &--active i {
+                        color: green;
+                    }                
+                    &--inactive i {
+                        color: red;
+                    }                  
+                }
+            }
+        }
+        .merchandise {
+            .column__mixin;
+            border: 8px solid @Light_Highlight-1;
+            .merchandise-items {
+                .merchandise-item {                    
+                    background-color: @Light_Tertiary-2;                    
+                    .merch_mixin{
+                        color: @Light_Primary;
+                    }
+                    .merchandise-item__name {
+                        .merch_mixin
+                    }
+
+                    .merchandise-item__colour {
+                        .merch_mixin
+                    }
+
+                    .merchandise-item__price {
+                        .merch_mixin
+                    }
+                }                
+            }
+        }
+    }   
 }
