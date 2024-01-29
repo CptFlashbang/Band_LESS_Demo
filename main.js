@@ -23,6 +23,21 @@ document.addEventListener('DOMContentLoaded', function () {
             hideMiddleColumn();
         }
     });
+
+
+    var paletteToggleSwitch = document.getElementById("palettetoggleSwitch");
+    paletteToggleSwitch.addEventListener("change", function () {
+        // Check if the checkbox is checked
+        if (paletteToggleSwitch.checked) {
+            // Enable light mode
+            document.body.classList.add("light-mode");
+            less.refresh();
+        } else {
+            // Disable light mode
+            document.body.classList.remove("light-mode");
+            less.refresh();
+        }
+    });
 });
 
 
