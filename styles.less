@@ -1,20 +1,11 @@
-#ColorsandFont() {
-    @Primary: #111111;
-    @Secondary: #EEF7FF;
-    @Tertiary: #1F1F1F;
-    @Tertiary-2: #838383;
-    @Highlight-1: #75AAB9;
-    @Highlight-2: #CE83DE;
-    @Roboto: 'Roboto', sans-serif;
-}
-
-#ColorsandFont();
+@import "colours.less";
+#DarkPalette();
 
 .column__mixin{
     flex-direction: column;
     flex-basis: calc(33.33% - 64px);
     padding: 8px;
-    background-color: @Tertiary;
+    background-color: @Dark_Tertiary;
     text-align: center;    
     border-radius: 10px;
     width: 90%;    
@@ -43,24 +34,24 @@
 
 .button__mixin {
     align-self: center;
-    color: @Primary;
+    color: @Dark_Primary;
     padding: 8px 2px;
     border: none;
     border-radius: 16px;
     transition: background-color 0.3s ease;
 
     &--active {
-        background-color: @Highlight-2;
+        background-color: @Dark_Highlight-2;
 
         &:hover {
-            background-color: @Highlight-1;
+            background-color: @Dark_Highlight-1;
             cursor: pointer;
         }
     }
 
     &--inactive {
-        background-color: @Tertiary-2;
-        color: @Secondary;
+        background-color: @Dark_Tertiary-2;
+        color: @Dark_Secondary;
     }
   }
 
@@ -69,9 +60,10 @@
 body {
     width: 90%;
     margin: 0 auto;
-    background-color: @Primary;
+    background-color: @Dark_Primary;
     font-family: @Roboto;
     box-sizing: border-box;
+    @Roboto: 'Roboto', sans-serif;
         @media (min-width: 426px) and (max-width: 1023px) {
         width: 100%;
     }
@@ -80,7 +72,7 @@ body {
     }
 
     h1, h2, p {
-        color: @Secondary;
+        color: @Dark_Secondary;
     }
     hr:first-child {
         margin-top: 32px;
@@ -132,7 +124,7 @@ body {
                 i.fa-eye {
                     visibility: visible;
                     transition: color 1s ease;
-                    color: @Primary;
+                    color: @Dark_Primary;
                 }
                 i.fa-eye-slash {
                     visibility: hidden;
@@ -149,7 +141,7 @@ body {
                 i.fa-eye-slash {
                     visibility: visible;
                     transition: color 1s ease;
-                    color: @Primary;
+                    color: @Dark_Primary;
                 }
             }
         }
@@ -164,12 +156,12 @@ body {
             display: flex;
             flex-direction: row;
             align-items: center;
-            border: 2px solid @Secondary;
+            border: 2px solid @Dark_Secondary;
             border-radius: 16px;
             i {
                 margin-left: 4px;
                 margin-right: 4px;
-                color: @Primary;
+                color: @Dark_Primary;
             }
         }
     }  
@@ -199,7 +191,7 @@ body {
 
         .streaming-release {
             .column__mixin;
-            border: 8px solid @Highlight-1;
+            border: 8px solid @Dark_Highlight-1;
 
             .releases{
                 @media (min-width: 426px) and (max-width: 1023px) {
@@ -256,10 +248,10 @@ body {
                         .fa-circle-play{
                         
                             display: block;
-                            color: @Secondary;
+                            color: @Dark_Secondary;
                             transition: color 0.3s ease;
                             &:hover {
-                                color: @Highlight-2;
+                                color: @Dark_Highlight-2;
                                 cursor: pointer;
                             }
                         }
@@ -271,7 +263,7 @@ body {
 
         .upcoming-performances {
             .column__mixin;
-            border: 8px solid @Highlight-2;
+            border: 8px solid @Dark_Highlight-2;
 
             .performances{
                 @media (min-width: 426px) and (max-width: 1023px) {
@@ -370,7 +362,7 @@ body {
         .merchandise {
             .column__mixin;
             display:grid;
-            border: 8px solid @Highlight-1;
+            border: 8px solid @Dark_Highlight-1;
             @media (min-width: 426px) and (max-width: 1023px) {
                 display:grid;
                 grid-template-columns: 1fr 2fr;
@@ -426,7 +418,7 @@ body {
                 .merchandise-item {                    
                     text-align: left;
                     padding: 8px 12px;
-                    background-color: @Tertiary-2;
+                    background-color: @Dark_Tertiary-2;
                     border-radius: 4px;
                     width: 150px;
                     height: 300px;                    
@@ -458,7 +450,7 @@ body {
                     .merch_mixin{
                         margin-block-start: 0.5em;
                         margin-block-end: 0.1em;
-                        color: @Primary;
+                        color: @Dark_Primary;
                     }
                     .merchandise-item__name {
                         .merch_mixin

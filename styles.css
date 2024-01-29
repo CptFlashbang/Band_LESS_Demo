@@ -110,38 +110,38 @@ body .hero .hero__paragraph {
     grid-column: 1 / span 1;
   }
 }
-body .toggle-container {
+body .mid-toggle-container {
   display: flex;
   justify-content: center;
 }
-body .toggle-container input[type="checkbox"] {
+body .mid-toggle-container input[type="checkbox"] {
   display: none;
 }
-body .toggle-container input[type="checkbox"]:checked + .toggle-label {
+body .mid-toggle-container input[type="checkbox"]:checked + .mid-toggle-container__toggle-label {
   background-color: green;
 }
-body .toggle-container input[type="checkbox"]:checked + .toggle-label i.fa-eye {
+body .mid-toggle-container input[type="checkbox"]:checked + .mid-toggle-container__toggle-label i.fa-eye {
   visibility: visible;
   transition: color 1s ease;
   color: #111111;
 }
-body .toggle-container input[type="checkbox"]:checked + .toggle-label i.fa-eye-slash {
+body .mid-toggle-container input[type="checkbox"]:checked + .mid-toggle-container__toggle-label i.fa-eye-slash {
   visibility: hidden;
   color: red;
 }
-body .toggle-container input[type="checkbox"]:not(:checked) + .toggle-label {
+body .mid-toggle-container input[type="checkbox"]:not(:checked) + .mid-toggle-container__toggle-label {
   background-color: red;
 }
-body .toggle-container input[type="checkbox"]:not(:checked) + .toggle-label i.fa-eye {
+body .mid-toggle-container input[type="checkbox"]:not(:checked) + .mid-toggle-container__toggle-label i.fa-eye {
   visibility: hidden;
   color: green;
 }
-body .toggle-container input[type="checkbox"]:not(:checked) + .toggle-label i.fa-eye-slash {
+body .mid-toggle-container input[type="checkbox"]:not(:checked) + .mid-toggle-container__toggle-label i.fa-eye-slash {
   visibility: visible;
   transition: color 1s ease;
   color: #111111;
 }
-body .toggle-container .toggle-label {
+body .mid-toggle-container .mid-toggle-container__toggle-label {
   margin: 8px auto;
   height: 20px;
   background-color: red;
@@ -153,7 +153,7 @@ body .toggle-container .toggle-label {
   border: 2px solid #EEF7FF;
   border-radius: 16px;
 }
-body .toggle-container .toggle-label i {
+body .mid-toggle-container .mid-toggle-container__toggle-label i {
   margin-left: 4px;
   margin-right: 4px;
   color: #111111;

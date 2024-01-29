@@ -1,0 +1,109 @@
+.column__mixin{
+    background-color: @Tertiary-Color;
+}
+.button__mixin {
+    color: @Primary-Color;
+    &--active {
+        background-color: @Highlight-Color-2;
+        &:hover {
+            background-color: @Highlight-Color-1;
+        }
+    }
+    &--inactive {
+        background-color: @Tertiary-Color-2;
+        color: @Secondary-Color;
+    }
+}
+body {
+    background-color: @Primary-Color;
+    h1, h2, p {
+        color: @Secondary-Color;
+    }
+    .mid-toggle-container {
+        input[type="checkbox"] {
+            &:checked + .mid-toggle-container__toggle-label {
+                background-color: green;
+                i.fa-eye {
+                    color: @Primary-Color;
+                }
+                i.fa-eye-slash {
+                    color: red;
+                }
+            }
+            &:not(:checked) + .mid-toggle-container__toggle-label {
+                background-color: red;
+                i.fa-eye {
+                    color: green;
+                }
+    
+                i.fa-eye-slash {
+                    color: @Primary-Color;
+                }
+            }
+        }    
+        .mid-toggle-container__toggle-label {
+            background-color: red;
+            border: 2px solid @Secondary-Color;
+            i {
+                color: @Primary-Color;
+            }
+        }
+    }  
+    .tri-column {
+        .streaming-release {
+            .column__mixin;
+            border: 8px solid @Highlight-Color-1;
+            .release {
+                .icon-container{
+                    a{
+                        color: inherit;
+                        .fa-circle-play{                        
+                            color: @Secondary-Color;
+                            &:hover {
+                                color: @Highlight-Color-2;
+                            }
+                        }
+                    }                    
+                }
+            }
+        }
+
+        .upcoming-performances {
+            .column__mixin;
+            border: 8px solid @Highlight-Color-2;
+            .performance {
+                &__ticket-availability {
+                    &--active i {
+                        color: green;
+                    }                
+                    &--inactive i {
+                        color: red;
+                    }                  
+                }
+            }
+        }
+        .merchandise {
+            .column__mixin;
+            border: 8px solid @Highlight-Color-1;
+            .merchandise-items {
+                .merchandise-item {                    
+                    background-color: @Tertiary-Color-2;                    
+                    .merch_mixin{
+                        color: @Primary-Color;
+                    }
+                    .merchandise-item__name {
+                        .merch_mixin
+                    }
+
+                    .merchandise-item__colour {
+                        .merch_mixin
+                    }
+
+                    .merchandise-item__price {
+                        .merch_mixin
+                    }
+                }                
+            }
+        }
+    }
+}
